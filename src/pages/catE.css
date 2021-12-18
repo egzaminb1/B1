@@ -1,0 +1,159 @@
+
+.baseScreen{
+    position: relative;
+}
+.bgImg{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    /* width: 100%; */
+    z-index: -20;
+    top: 0;
+}
+.dispCat div{
+    padding:0 20px;
+    display:flex;
+    justify-content:space-between;
+    background: rgba(237, 28, 36, .9);
+    /* border-bottom: solid 2px white; */
+    margin-bottom: 2px;
+    color: white;
+}
+
+.dispCat h4{
+    margin: 10px 0;
+}
+.catE  img{
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    display: block;
+}
+.catE h4{
+    font-family: 'Roboto Slab', serif;
+    font-size: calc(1.4rem + 0.6vw);
+}
+/* .catE .headE{
+    background: rgba(255, 255, 255, 0.95);
+    border: solid 3px red;
+    border-radius: 10px;
+    box-shadow: 6px 6px 16px #888;
+    padding: 10px 10px;
+    font-size: 18px;
+    max-width: 1200px;
+    margin: auto;
+} */
+.catE  p{
+    font-size: calc(.8rem + 0.6vw);
+}
+.catE  h5{
+    font-size: calc(1rem + 0.6vw);
+    margin-bottom: 15px;
+}
+/* .catE h4{
+    font-size: calc(1rem + 0.6vw);
+} */
+.catE .headE .pointE table{
+    max-width: 600px;
+    margin-bottom: 10px;
+    min-width: 300px;
+}
+.catE .headE .pointE table tbody tr:nth-child(odd){
+    background-color: rgba(237, 28, 36, .05)
+}
+.catE .headE .pointE table td{
+    font-size: calc(.8rem + 0.6vw);
+}
+.catE .headE .pointE table thead{
+    font-weight: bold;
+    font-size: calc(.8rem + 0.6vw);
+}
+.catE .headE .pointE table td:first-child{
+    width: 240px;
+}
+.catE .exeE{
+    background: rgba(255, 255, 255, 0.95);
+    border: solid 3px red;
+    border-radius: 10px;
+    box-shadow: 6px 6px 16px #888;
+    padding: 10px 10px;
+    font-size: 18px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* min-width: 400px; */
+}
+
+.wzorE .wzorE1Head>h4{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.wzorE .wzorE2Head>h4{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.wzorE .wzorE3Head>h4{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.wzorE .wzorE2Head>div{
+    border: solid 1px black;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.wzorE .wzorE1Head>div{
+    border: solid 1px black;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.wzorE table td{
+    border: solid 1px black;
+    padding-left: 5px;
+}
+.wzorE table {
+    margin-bottom: 15px;
+    /* font-size: calc(.8rem + 0.6vw); */
+    font-size: calc(.5rem + 1.0vw);
+}
+.wzorE table b{
+    display: block;
+    text-align: center;
+}
+.wzorE p{
+    margin: 5px 0px;
+}
+.wzorE .zad2 h5+h5{
+    font-family: 'Roboto Slab', serif;
+}
+.wzorE .zad3 h5+h5{
+    font-family: 'Roboto Slab', serif;
+}
+.wzorE .zad1 p, .wzorE .zad2 p, .wzorE .zad3 p{
+    font-style: italic;
+}
+.wzorE p::before{
+    content: '';
+    margin-left: 15px;
+}
+@media only screen and (max-width: 640px){
+    .dispCat h4{
+        font-size: 5vw;
+    }
+}
+@media only screen and (min-width: 530px){
+    .catE .headE .pointE table td:first-child{
+        width: 400px;
+    }
+}

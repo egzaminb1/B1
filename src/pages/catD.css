@@ -1,0 +1,117 @@
+
+
+.catD  img{
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    display: block;
+}
+.catD h4{
+    font-family: 'Roboto Slab', serif;
+    font-size: calc(1.4rem + 0.6vw);
+}
+/* .catD  p{
+    font-size: calc(.8rem + 0.6vw);
+} */
+.catD  span.green{
+    color: green;
+}
+.catD  span.red{
+    color: red;
+}
+.catD  h5{
+    font-size: calc(1rem + 0.6vw);
+    margin-bottom: 15px;
+}
+.catD .headD .pointD table{
+    max-width: 600px;
+    margin-bottom: 10px;
+    min-width: 300px;
+}
+.catD .headD .pointD table tbody tr:nth-child(odd){
+    background-color: rgba(237, 28, 36, .05)
+}
+.catD .headD .pointD table td{
+    font-size: calc(.8rem + 0.6vw);
+}
+.catD .headD .pointD table thead{
+    font-weight: bold;
+    font-size: calc(.8rem + 0.6vw);
+}
+.catD .headD .pointD table td:first-child{
+    width: 240px;
+}
+.catD .exeD{
+    background: rgba(255, 255, 255, 0.95);
+    border: solid 3px red;
+    border-radius: 10px;
+    box-shadow: 6px 6px 16px #888;
+    padding: 10px 10px;
+    font-size: 18px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* min-width: 400px; */
+}
+.exerciseD table{
+    margin-bottom: 15px;
+    width: 100%;
+}
+.exerciseD table td{
+    font-size: calc(.8rem + 0.6vw);
+}
+.exerciseD table tbody tr:nth-child(even){
+    /* border: solid 1px black; */
+    background-color: rgba(237, 28, 36, .05);
+    border-radius: 5px;
+}
+.exerciseD table tbody td{
+    padding-left: 5px;
+}
+.exerciseD table tbody td textarea{
+    border:none;
+    background-color: rgba(237, 28, 36, .0);
+    width: 100%;
+}
+.exerciseD table tbody td.red textarea:focus-visible{
+    outline-color:red
+}
+.exerciseD table tbody td.green textarea:focus-visible{
+    outline-color:green
+}
+.exerciseD table tbody td{
+    margin: 0;
+}
+
+.wzorD h4{
+    margin-bottom: 25px;
+    text-align: center;
+} 
+.wzorD .wzorD1Head>div{
+    margin-bottom: 15px;
+} 
+.wzorD .wzor1Text{
+    margin-bottom: 60px;
+} 
+.wzorD p{
+    margin-bottom: 3px;
+} 
+.wzorD p::before{
+    content: '';
+    margin-left: 15px;
+} 
+
+
+@media only screen and (max-width: 640px){
+    .dispCat h4{
+        font-size: 5vw;
+    }
+}
+@media only screen and (min-width: 530px){
+    .catD .headD .pointD table td:first-child{
+        width: 400px;
+    }
+}

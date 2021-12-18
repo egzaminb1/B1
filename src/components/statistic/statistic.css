@@ -1,0 +1,61 @@
+
+
+.modal-content{
+    /* box-shadow: 12px 12px 20px #888888; */
+    border-radius: 5px;
+    /* border: solid 5px red; */
+    background: rgba(255, 255, 255, 0.9);
+}
+.modal-title{
+    font-size: 30px;
+    font-family: 'Roboto Slab', serif;
+    width: 100%;
+    position: relative;
+}
+.modal-title button{
+    border-radius: 5px;
+    border: solid 2px ;
+    position: absolute;
+    right: 0;
+}
+.contBtn{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#moreStatistic h5{
+    font-size: 25px;
+}
+#moreStatistic span{
+    text-transform: lowercase;
+}
+#moreStatistic table{
+    width: 100%;
+    margin: 15px auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#moreStatistic table tr:nth-child(even){
+     background-color: #e6caca;
+}
+#moreStatistic table td:last-child{
+    width: 100px;
+}
+#moreStatistic{
+    max-height: 0;
+    overflow-y: hidden;
+    -webkit-transition: max-height 1s; 
+  -moz-transition: max-height 1s; 
+  -ms-transition: max-height 1s; 
+  -o-transition: max-height 1s; 
+  transition: max-height .5s; 
+}
+#moreStatistic.active{
+    overflow-y:auto;
+    max-height: 1000px;
+    -webkit-transition: max-height 1s; 
+  -moz-transition: max-height 1s; 
+  -ms-transition: max-height 1s; 
+  -o-transition: max-height 1s; 
+  transition: max-height 1s; 
+}

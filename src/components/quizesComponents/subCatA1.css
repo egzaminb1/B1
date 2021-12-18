@@ -1,0 +1,58 @@
+
+.subCatA1>div:first-child{
+    /* background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px; */
+}
+.subCatA1 .col-sm-6>div{
+    background: rgba(255, 255, 255, 0.95);
+}
+.subCatA1 .block>div, .subCatA1 .blPoints>div, .subCatA1 .template>div{
+    border: solid 3px red;
+    border-radius: 10px;
+    box-shadow: 6px 6px 16px #888;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    min-height: 220px;
+}
+.subCatA1 .questions .bold{
+    font-weight: bold;
+}
+.subCatA1 .questions .green{
+    color:green;
+}
+.subCatA1 .questions .red{
+    color:red;
+}
+.subCatA1 .block p{
+    font-style: italic;
+    transition: all .2s linear;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+.subCatA1 .block p:hover{
+    box-shadow: 2px 2px 5px #888;
+}
+.headSubCat{
+    padding: 10px ;
+    margin-bottom: 5px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+}
+.headSubCat h5:first-child{
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    
+}
+.subCatA1 .questions{
+    position: relative;
+}
+.subCatA1 .questions .mask{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: rgba(0,0,0,.1);
+}

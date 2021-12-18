@@ -1,0 +1,31 @@
+body{
+    min-width: 340px;
+}
+/*============== button Up ==============*/
+.scrollToTop1{
+	height: 50px;
+	width: 50px;
+	color: #fff;
+	position: fixed;
+	bottom: 46px;
+	right: 0px;
+	z-index: 100;
+	transition:all .3s;
+	display: none;
+    border-radius: 5px;
+    background: rgba(237, 28, 36, .8);
+    border: solid 4px red;
+    padding: 5px ;
+    font-size: 35px;
+}
+.scrollToTop1 i{
+    position: absolute;
+    left: 7px;
+    top: 5px;
+}
+.scrollToTop1:hover{
+	color: #fff;
+    background: rgba(237, 28, 36, 1);
+    box-shadow: 2px 2px 7px #888;
+}
+/*==============  ==============*/

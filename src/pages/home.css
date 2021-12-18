@@ -1,0 +1,213 @@
+
+body{
+    transition: all .5s;
+}
+.home{
+    position: relative;
+}
+.home .introdaction{
+    /* background: rgb(82, 138, 202); */
+    min-height: 300px;
+    /* filter: blur(3px);
+  -webkit-filter: blur(3px); */
+  position: relative;
+}
+/* .home .introdaction .intMaska{
+    background: rgba(255, 255, 255, 0.6);
+    height: 100%;
+  position: absolute;
+} */
+.home .navbar{
+    position: absolute;
+    height: fit-content;
+    background: rgba(237, 28, 36, .9);
+    z-index: 11;
+}
+.home .navbar .navbar-brand{
+    font-size: 20px;
+    font-family: 'Roboto Slab', serif;
+}
+.home .navbar .navbar-nav{
+    width: 100%;
+    padding: 0 70px;
+    display: flex;
+    justify-content: space-around;
+}
+.home .navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    transition: all .5s;
+}
+.home .image{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home .intContainer {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    margin-top: 60px;
+}
+.home .intContainer h3{
+    width: fit-content;
+    margin: auto;
+    margin-top: 10px;
+    padding: 0 10px;
+    position: relative;
+    z-index: 10;
+    font-family: 'Roboto Slab', serif;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+.home .intContainer p{
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    z-index: 10;
+    font-weight: bold;
+    font-size: calc(.8rem + 0.6vw);
+    max-width: 850px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    font-style: italic;
+}
+.home .cat{
+    box-shadow: 12px 12px 20px #888888;
+    border-radius: 5px;
+    border: solid 5px red;
+}
+.home .row.cat{
+    --bs-gutter-x: 0;
+}
+.home .row.cat .nav-link.left{
+    /* padding-left: 0;
+    padding-right: 0;
+    padding-top: 0; */
+    padding: 0;
+}
+.home .left .image{
+    /* background: #33f; */
+    height: 300px;
+    position: relative;
+}
+.row .left h2{
+    background: rgba(237, 28, 36, .8);
+    padding-left: 15px;
+    padding-bottom: 5px;
+    color: #fff;
+    transition: all .5s;
+    font-family: 'Roboto Slab', serif;
+}
+.row .left:hover h2{
+    padding-left: 20px;
+}
+.row .left .imgDown{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(237, 28, 36, .8);
+    text-align: right;
+}
+.row .left .imgDown h2{
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    margin-right: 30px;
+    width: fit-content;
+    transition: all .5s;
+}
+.row .left:hover{
+    cursor: pointer;
+}
+.row .left:hover .imgDown h2{
+    margin-right: 35px;
+}
+.row .left .imgDown h2 span{
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+    border-radius: 50%;
+    font-size: 42px;
+    width: 50px;
+    height: 50px;
+    line-height:42px;
+    text-align: center;
+    display: inline-block;
+    background: rgba(237, 28, 36, 1);
+}
+
+.home .cat .right p{
+    height: 200px;
+    overflow: auto;
+    font-style: italic;
+    margin: 20px 10px 10px;
+}
+.home .cat .right p::before{
+    content: '';
+    margin-left: 20px;
+}
+.home .cat .right{
+    height: 300px;
+    /* overflow: auto; */
+    display: flex;
+    flex-direction: column;
+}
+.home .cat .right .nav-link{
+    flex: 1 1 auto;
+    align-self:center;
+    display: flex;
+}
+.myBtn{
+    background: rgba(237, 28, 36, .8);
+    border: solid 4px red;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 7px #888;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all .5s;
+    align-self: flex-end;
+}
+.myBtn:hover{
+    background: rgba(237, 28, 36, 1);
+    box-shadow: 2px 2px 7px #888;
+}
+
+/*============== button Up ==============*/
+
+
+/* XXL Super Large Device, Wide Screens*/
+@media only screen and (max-width: 1400px) {
+	
+}
+/* XL Extra Large Device, Wide Screens*/
+@media only screen and (max-width: 1200px) {
+	
+}
+/* LG Large Device, Wide Screens*/
+@media only screen and (max-width: 992px) {
+	.navbar .nav-link:hover{
+        /* background: red; */
+        letter-spacing: .4rem;
+    }
+	.navbar span.nav-link{
+        display: none;
+    }
+}
+/* MD Medium Devices, Desktops */
+@media only screen and (max-width : 768px) {
+}
+/* SM Small Device, Wide Screens*/
+@media only screen and (max-width: 576px) {
+	.modal-dialog {
+        max-width: 350px;
+        margin: 1.75rem auto;
+    }
+}
+/* XS Extra small Device, Wide Screens
+@media only screen and (max-width : 567px){
+	
+
+} */
