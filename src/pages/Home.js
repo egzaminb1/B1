@@ -91,7 +91,7 @@ import { clearStateA, clearStatistic } from "../store/actions/actionCreaters";
         </NavLink>
             <div className='col-md-6 right'>
             <p>Część D zawiera dwie wzorcowe formy pisemne (list oficjalny i list nieoficjalny) oraz propozycje tematów prac pisemnych w formie przykładowych zestawów egzaminacyjnych.</p>
-            <NavLink to="/CatD" className="nav-link" onClick={props.clearStateA}><button className='myBtn'>Rozpocznij</button></NavLink>
+            <NavLink to="/CatD" className="nav-link" onClick={props.clearStatistic}><button className='myBtn'>Rozpocznij</button></NavLink>
             </div>
         </div>
         <hr></hr>
@@ -106,7 +106,7 @@ import { clearStateA, clearStatistic } from "../store/actions/actionCreaters";
         </NavLink>
             <div className='col-md-6 right'>
             <p>Część E zawiera wzory wypowiedzi na wskazane tematy, w których wytłuszczono zdania i wyrażenia pomocne przy tworzeniu samodzielnych wypowiedzi. Znaleźć tu można schemat opisu ilustracji, monolog, sytuację komunikacyjną oraz zestawy przykładowych pytań egzaminacyjnych.</p>
-            <NavLink to="/CatE" className="nav-link" onClick={props.clearStateA}><button className='myBtn'>Rozpocznij</button></NavLink>
+            <NavLink to="/CatE" className="nav-link" onClick={props.clearStatistic}><button className='myBtn'>Rozpocznij</button></NavLink>
             </div>
         </div>
         <hr></hr>
