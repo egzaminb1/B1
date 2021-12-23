@@ -11,7 +11,7 @@ import speaking from '../assets/img/speaking.jpg'
 import writing from '../assets/img/writing.jpg'
 import introduction from '../assets/img/introduction.jpg'
 import { NavLink } from "react-router-dom";
-import { clearStateA, clearStatistic } from "../store/actions/actionCreaters";
+import { clearStateA, clearStateB, clearStateC, clearStatistic } from "../store/actions/actionCreaters";
 
  const Home =(props)=>{
    
@@ -44,12 +44,12 @@ import { clearStateA, clearStatistic } from "../store/actions/actionCreaters";
                 <p>
                 Część A zawiera wszystkie typy zadań, które mogą pojawić się w teście egzaminacyjnym (luki do uzupełnienia, prawda/fałsz, wybór wielokrotny, dobieranie informacji, zadania z wykorzystaniem materiałów graficznych). Teksty do ćwiczeń na rozumienie ze słuchu zostały nagrane.
                 </p>
-                <NavLink to="/CatA" className="nav-link" onClick={props.clearStateA}><button className='myBtn'>Rozpocznij</button></NavLink>
+                <NavLink to="/CatA" className="nav-link" onClick={props.clearStateB}><button className='myBtn'>Rozpocznij</button></NavLink>
             </div>
         </div>
         <hr></hr>
         <div className='row cat catB'>
-        <NavLink to="/CatA" className="nav-link col-md-6 left" onClick={props.clearStateA}>
+        <NavLink to="/CatB" className="nav-link col-md-6 left" onClick={props.clearStateB}>
             <div className='image' style={{backgroundImage:`url(${grammar})`}}>
                 <h2>Poprawność gramatyczna</h2>
                 <div className='imgDown'>
@@ -61,12 +61,12 @@ import { clearStateA, clearStatistic } from "../store/actions/actionCreaters";
                 <p>
                 Ćwiczenia sprawdzające umiejętności gramatyczne zostały zamieszczone w części B. Znajdująsię tu zadania, w których trzeba wybrać poprawną formę (wybór wielokrotny, wybór z ramki) lub ją stworzyć (zadaniaz lukami, transformacje).
                 </p>
-                <NavLink to="/CatA" className="nav-link" onClick={props.clearStateA}><button className='myBtn'>Rozpocznij</button></NavLink>
+                <NavLink to="/CatB" className="nav-link" onClick={props.clearStateB}><button className='myBtn'>Rozpocznij</button></NavLink>
             </div>
         </div>
         <hr></hr>
         <div className='row cat catC'>
-        <NavLink to="/CatA" className="nav-link col-md-6 left"   onClick={props.clearStateA}>
+        <NavLink to="/CatC" className="nav-link col-md-6 left"   onClick={props.clearStateC}>
         <div className='image' style={{backgroundImage:`url(${reading})`}}>
             <h2>Rozumienie tekstów pisanych</h2>
             <div className='imgDown'>
@@ -76,7 +76,7 @@ import { clearStateA, clearStatistic } from "../store/actions/actionCreaters";
         </NavLink>
             <div className='col-md-6 right'>
             <p>Część C zawiera wszystkie typy zadań testujących kompetencję w zakresie rozumienia tekstów pisanych, które mogą pojawić się podczas egzaminu (prawda/fałsz, wybór wielokrotny, dobieranie informacji, zadania z lukami). Wybrane ćwiczenia to wzorcowe formy pisemne, które są wymagane na poziomie Bl (list nieoficjalny formalny, recenzja, podanie). Tym samym, sprawdzając swoje umiejętności w zakresie rozumienia tekstu pisanego, można przypomnieć sobie reguły obowiązujące przytworzeniu niektórych form pisemnych.</p>
-            <NavLink to="/CatA" className="nav-link" onClick={props.clearStateA}><button className='myBtn'>Rozpocznij</button></NavLink>
+            <NavLink to="/CatC" className="nav-link" onClick={props.clearStateC}><button className='myBtn'>Rozpocznij</button></NavLink>
             </div>
         </div>
         <hr></hr>
@@ -128,6 +128,8 @@ return(
 const mapDispatchToProps=(dispatch)=>(
     {
         clearStateA:()=>dispatch(clearStateA()),
+        clearStateB:()=>dispatch(clearStateB()),
+        clearStateC:()=>dispatch(clearStateC()),
         clearStatistic:()=>dispatch(clearStatistic())
     }
 )

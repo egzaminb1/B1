@@ -1,0 +1,68 @@
+
+.subCatB1 .questions{
+    background: rgba(255, 255, 255, 0.95);
+    border: solid 3px red;
+    border-radius: 10px;
+    box-shadow: 6px 6px 16px #888;
+    padding: 5px 10px;
+}
+.subCatB1 .points{
+    position: relative;
+}
+.subCatB1 .points h5{
+    position: absolute;
+    right: 20px;
+    width: 150px;
+    text-align: right;
+}
+.subCatB1 .paragraf>div{
+    line-height: 2.2em;
+    display: inline;
+}
+.subCatB1 .paragraf>*:first-child{
+    margin-left: 20px;
+}
+.subCatB1 .paragraf>div p{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+.subCatB1 .inp{
+    font-weight: bold;
+}
+.subCatB1 input{
+    border: none;
+    background: rgba(228,213,14,.2);
+    text-align: center;
+    height: 1.5em;
+    border-radius: 5px;
+    max-width: 100%;
+}
+.subCatB1 .paragraf .bGreen{
+    color:green;
+    font-weight: bold;
+}
+.subCatB1 .paragraf i{
+    color:green;
+    position:absolute;
+    right: 0;
+    top: -17px;
+}
+
+.subCatB1 .paragraf .red{
+    color:red;
+    font-weight: bold;
+}
+.subCatB1 .questions{
+    position: relative;
+}
+.subCatB1 .questions .mask{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: rgba(0,0,0,.1);
+}

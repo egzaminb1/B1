@@ -2,6 +2,9 @@
 import  SubCatA1  from "../components/quizesComponents/SubCatA1";
 import  SubCatA3  from "../components/quizesComponents/SubCatA3";
 import  SubCatA4  from "../components/quizesComponents/SubCatA4";
+import  SubCatB1  from "../components/quizesComponents/SubCatB1";
+import SubCatB2 from "../components/quizesComponents/SubCatB2";
+import  SubCatC1  from "../components/quizesComponents/SubCatC1";
 import { QuizA1_1 } from "./QuizCatA/QuizA1_1";
 import { QuizA1_2 } from "./QuizCatA/QuizA1_2";
 import { QuizA1_3 } from "./QuizCatA/QuizA1_3";
@@ -19,6 +22,12 @@ import { QuizA4_4 } from "./QuizCatA/QuizA4_4";
 import { QuizA4_5 } from "./QuizCatA/QuizA4_5";
 import { QuizA4_6 } from "./QuizCatA/QuizA4_6";
 import { QuizA4_7 } from "./QuizCatA/QuizA4_7";
+import { QuizB1_1 } from "./quizCatB/QuizB1_1";
+import { QuizB1_2 } from "./quizCatB/QuizB1_2";
+import { QuizB2_1 } from "./quizCatB/QuizB2_1";
+import { QuizB2_2 } from "./quizCatB/QuizB2_2";
+import { QuizB2_3 } from "./quizCatB/QuizB2_3";
+import { QuizC1_1 } from "./quizCatC/QuizC1_1";
 import { QuizD1 } from "./quizCatD/QuizD1";
 import { QuizD2 } from "./quizCatD/QuizD2";
 import { QuizD3 } from "./quizCatD/QuizD3";
@@ -34,8 +43,8 @@ import { QuizE6 } from "./quizCatE/QuizE6";
 
 
     export const catA={
-        catAHeader:['Część A','Rozumienie ze słuchu'],
-        subCatA:[
+        catHeader:['Część A','Rozumienie ze słuchu'],
+        subCat:[
             {
                 headQuiz:['Zadania z jednostkami wyboru wielokrotnego','Taki typ ćwiczenia może mieć różne formy. Jedną z nich jest zadanie, które odtwarzane jest tylko jeden raz. Zdający wysłuchuje krótkiego komunikatu, a następnie musi zdecydować, co oznacza wypowiedź lub gdzie jest możliwa do usłyszenia. Warto przeczytać wszystkie odpowiedzi przed usłyszeniem komunikatu. Wybiera się spośród trzech możliwości: jedna z nich jest nieprawdopodobna, druga możliwa, a tylko jedna prawidłowa.'],
                 component:<SubCatA1/>,
@@ -66,23 +75,43 @@ import { QuizE6 } from "./quizCatE/QuizE6";
     }
 
    export const catB={
-        subCatB1:{},
-        subCatB2:{},
-        subCatB3:{}
+        catHeader:['Część B','Poprawność gramatyczna'],
+        subCat:[
+            {
+                headQuiz:['Transformacje',`To najczęściej spotykany typ zadania. W nawiasie podane są formy podstawowe rzeczowników, czasowników, zaimków, przymiotników, liczebników, przysłówków należy utworzyć poprawną formę tych wyrazów.`],
+                component:<SubCatB1></SubCatB1>,
+                quizes:[QuizB1_1, QuizB1_2] 
+            },
+            {
+                headQuiz:['Transformacje',`Tym typem transformacji jest przekształcenie zdań przy użyciu podanych wyrazów. W poleceniu znajduje się wzór, według którego powinno się przekształcać zdania, np. wszystkie transformacje należy utworzyć w formie trybu przypuszczającego. Trzeba pamiętać o dodatkowych operacjach, np. zamianie czasownika na rzeczownik, zamianie rzeczowników na odpowiednie zaimki.`],
+                component:<SubCatB2></SubCatB2>,
+                quizes:[QuizB2_1, QuizB2_2, QuizB2_3] 
+            }
+        ]
     }
 
     export const catC={
-        subCatC1:{},
-        subCatC2:{},
-        subCatC3:{}
+        catHeader:['Część C','Rozumienie tekstów pisanych'],
+        subCat:[
+            {
+                headQuiz:['Zadania z jednostkami wyboru wielokrotnego',`Wybór informacyjny - pojedyncze napisy`],
+                component:<SubCatC1></SubCatC1>,
+                quizes:[QuizC1_1, QuizC1_1] 
+            },
+            {
+                headQuiz:['Zadania z jednostkami wyboru wielokrotnego',`Wybór informacyjny - pojedyncze napisy`],
+                component:<SubCatC1></SubCatC1>,
+                quizes:[QuizC1_1, QuizC1_1, QuizC1_1, QuizC1_1] 
+            }
+        ]
     }
 
     export const catD={
-        catAHeader:['Część D','Pisanie'],
+        catHeader:['Część D','Pisanie'],
         quizes:[QuizD1, QuizD1, QuizD2, QuizD3, QuizD4, QuizD5, QuizD6] 
     }
 
     export const catE={
-        catAHeader:['Część E','Mówienie'],
+        catHeader:['Część E','Mówienie'],
         quizes:[QuizE1, QuizE1, QuizE2, QuizE3, QuizE4, QuizE5, QuizE6] 
     }

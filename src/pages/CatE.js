@@ -89,8 +89,8 @@ const mapStateToProps=(state)=>{
 return(
     {
     selectExe:state.QuizCatE.selectExe,
-    headerLeft:state.QuizCatE.catE.catAHeader[0],
-    headerRight:state.QuizCatE.catE.catAHeader[1],
+    headerLeft:state.QuizCatE.catE.catHeader[0],
+    headerRight:state.QuizCatE.catE.catHeader[1],
     zad1:state.QuizCatE.currentQuiz.exercise[0],
     zad2:state.QuizCatE.currentQuiz.exercise[1],
     zad3:state.QuizCatE.currentQuiz.exercise[2],

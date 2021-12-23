@@ -20,14 +20,14 @@ let xState={...QuizA1_1}
      xState.card[x1].p[x2].cls='bold'
 //--------------------------------
 const initialState={
-    catA:catA,
+    cat:catA,
     currentQuiz:{...QuizA1_1},
     //inputCat:'selCatA',
     selectSubCat:0,
     numQuestion:0,
     hintMode:false,
-    lengthSubCat:catA.subCatA.length,
-    lengthQuestions:catA.subCatA[0].quizes.length,
+    lengthSubCat:catA.subCat.length,
+    lengthQuestions:catA.subCat[0].quizes.length,
     isChecked:false,
 
     timerOfComponent:0,
@@ -44,17 +44,17 @@ export const  QuizCatAReducer=(state=initialState, action)=>{
    let numQuestion=state.numQuestion
    let selectSubCat=state.selectSubCat
    //let lengthQuestions=state.lengthQuestions
-   let lengthQuestions=state.catA.subCatA[selectSubCat].quizes.length 
+   let lengthQuestions=state.cat.subCat[selectSubCat].quizes.length 
    let lengthSubCat=state.lengthSubCat
-   let currentQuiz=state.catA.subCatA[selectSubCat].quizes[numQuestion]
+   let currentQuiz=state.cat.subCat[selectSubCat].quizes[numQuestion]
    let newState={...state}
    let rightAnswers=0
    let pointForAnswer=0
     let curRightPoints=0
     let statistic={}
     let quantity=0
-    let catAHeader=state.catA.catAHeader
-    let headQuiz=state.catA.subCatA[selectSubCat].headQuiz[0]
+    let catHeader=state.cat.catHeader
+    let headQuiz=state.cat.subCat[selectSubCat].headQuiz[0]
 
     // newState.currentQuiz={...state.currentQuiz}
     // newState.currentQuiz.card=[...state.currentQuiz.card]
@@ -129,22 +129,22 @@ export const  QuizCatAReducer=(state=initialState, action)=>{
              let hint=(state.hintMode===true)?false:true
              //console.log(currentQuizFunc())
             //  let y=currentQuizFunc()
-            //  let x=(state.catA.subCatA[0].quizes[0].card[0].p[0]===y.card[0].p[0])
+            //  let x=(state.cat.subCat[0].quizes[0].card[0].p[0]===y.card[0].p[0])
             //  console.log(x)
             return(
             {...state, hintMode:hint})
         case AC_SAVE_SUBCAT:
-            currentQuiz=state.catA.subCatA[action.numSubCat].quizes[0]
+            currentQuiz=state.cat.subCat[action.numSubCat].quizes[0]
             currentQuiz=currentQuizFunc(currentQuiz, action.numSubCat)
-            //lengthQuestions=state.catA.subCatA[action.numSubCat].quizes.length
+            //lengthQuestions=state.cat.subCat[action.numSubCat].quizes.length
             // console.log(currentQuiz)
             return(
-            {...state, selectSubCat:action.numSubCat, numQuestion:0, isChecked:false,  lengthQuestions, currentQuiz})
+            {...state, selectSubCat:action.numSubCat, numQuestion:0, isChecked:false, hintMode:false,  lengthQuestions, currentQuiz})
         case AC_SAVE_NUMQUESTION:
-             currentQuiz=state.catA.subCatA[state.selectSubCat].quizes[action.numQuestion]
+             currentQuiz=state.cat.subCat[state.selectSubCat].quizes[action.numQuestion]
              currentQuiz=currentQuizFunc(currentQuiz)
             return(
-            {...state, numQuestion:action.numQuestion, isChecked:false,  currentQuiz})
+            {...state, numQuestion:action.numQuestion, isChecked:false, hintMode:false, currentQuiz})
         case AC_BOLD_CLASS:
             if(!state.isChecked){
             let k1=action.keyCard
@@ -170,25 +170,25 @@ export const  QuizCatAReducer=(state=initialState, action)=>{
                 }else{
                     numQuestion++
                 }
-                lengthQuestions=state.catA.subCatA[selectSubCat].quizes.length
-                currentQuiz=state.catA.subCatA[selectSubCat].quizes[numQuestion]
+                lengthQuestions=state.cat.subCat[selectSubCat].quizes.length
+                currentQuiz=state.cat.subCat[selectSubCat].quizes[numQuestion]
                 currentQuiz=currentQuizFunc(currentQuiz, selectSubCat)
                 return(
-                {...state, numQuestion, selectSubCat, isChecked:false,  lengthQuestions, currentQuiz})
+                {...state, numQuestion, selectSubCat, isChecked:false, hintMode:false, lengthQuestions, currentQuiz})
             case AC_PREV:
                 if(numQuestion<=0){
                     if(selectSubCat>0){
                         selectSubCat--
-                lengthQuestions=state.catA.subCatA[selectSubCat].quizes.length 
+                lengthQuestions=state.cat.subCat[selectSubCat].quizes.length 
                         numQuestion=lengthQuestions-1
                     }
                 }else{
                     numQuestion--
                 }
-                currentQuiz=state.catA.subCatA[selectSubCat].quizes[numQuestion]
+                currentQuiz=state.cat.subCat[selectSubCat].quizes[numQuestion]
                 currentQuiz=currentQuizFunc(currentQuiz, selectSubCat)
                 return(
-                {...state, numQuestion, selectSubCat, isChecked:false,  lengthQuestions, currentQuiz})
+                {...state, numQuestion, selectSubCat, isChecked:false, hintMode:false, lengthQuestions, currentQuiz})
             case AC_CHECK_EXE:
                 let arrCards
                 // let rightAnswers=0
@@ -223,7 +223,7 @@ export const  QuizCatAReducer=(state=initialState, action)=>{
                 curRightPoints=rightAnswers*pointForAnswer
                 newState.curRightPoints=curRightPoints
                 newState.arrStatistic=[...state.arrStatistic]
-                statistic={catAHeader, headQuiz, selectSubCat:state.selectSubCat, numQuestion:state.numQuestion, quantity, points:pointForAnswer, curRightPoints, sumPoints:quantity*pointForAnswer, timerOfComponent:action.time }
+                statistic={catHeader, headQuiz, selectSubCat:state.selectSubCat, numQuestion:state.numQuestion, quantity, points:pointForAnswer, curRightPoints, sumPoints:quantity*pointForAnswer, timerOfComponent:action.time }
                 newState.arrStatistic.push(statistic)
                 }
                 return(newState)
@@ -263,7 +263,7 @@ export const  QuizCatAReducer=(state=initialState, action)=>{
                 curRightPoints=rightAnswers*pointForAnswer
                 newState.curRightPoints=curRightPoints
                 newState.arrStatistic=[...state.arrStatistic]
-                statistic={catAHeader, headQuiz, selectSubCat:state.selectSubCat, numQuestion:state.numQuestion, quantity, points:pointForAnswer, curRightPoints, sumPoints:quantity*pointForAnswer, timerOfComponent:action.time }
+                statistic={catHeader, headQuiz, selectSubCat:state.selectSubCat, numQuestion:state.numQuestion, quantity, points:pointForAnswer, curRightPoints, sumPoints:quantity*pointForAnswer, timerOfComponent:action.time }
                 newState.arrStatistic.push(statistic)
                 return(newState)
 
@@ -320,7 +320,7 @@ export const  QuizCatAReducer=(state=initialState, action)=>{
                     curRightPoints=rightAnswers*pointForAnswer
                     newState.curRightPoints=curRightPoints
                     newState.arrStatistic=[...state.arrStatistic]
-                    statistic={catAHeader, headQuiz, selectSubCat:state.selectSubCat, numQuestion:state.numQuestion, quantity, points:pointForAnswer, curRightPoints, sumPoints:quantity*pointForAnswer, timerOfComponent:action.time }
+                    statistic={catHeader, headQuiz, selectSubCat:state.selectSubCat, numQuestion:state.numQuestion, quantity, points:pointForAnswer, curRightPoints, sumPoints:quantity*pointForAnswer, timerOfComponent:action.time }
                     newState.arrStatistic.push(statistic)
                     }
                     

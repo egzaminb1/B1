@@ -8,6 +8,8 @@ import  CatD  from "./pages/CatD";
 import { Footer } from "./components/footer/Footer";
 import './styleSrc.css';
 import CatE from "./pages/CatE";
+import CatB from "./pages/CatB";
+import CatC from "./pages/CatC";
 // import bgImg from './assets/img/introduction.jpg'
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
         <Switch>
           {/* <Route path="/" exact component={Home}></Route> */}
           <Route path="/CatA" component={CatA}></Route>
+          <Route path="/CatB" component={CatB}></Route>
+          <Route path="/CatC" component={CatC}></Route>
           <Route path="/CatD" component={CatD}></Route>
           <Route path="/CatE" component={CatE}></Route>
           <Route path="/about" component={About}></Route>

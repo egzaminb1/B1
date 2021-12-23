@@ -67,8 +67,8 @@ const mapStateToProps=(state)=>{
 return(
     {
     selectExe:state.QuizCatD.selectExe,
-    headerLeft:state.QuizCatD.catD.catAHeader[0],
-    headerRight:state.QuizCatD.catD.catAHeader[1],
+    headerLeft:state.QuizCatD.catD.catHeader[0],
+    headerRight:state.QuizCatD.catD.catHeader[1],
     arrQuizes:state.QuizCatD.catD.quizes.length,
     currentQuiz:state.QuizCatD.currentQuiz
     }

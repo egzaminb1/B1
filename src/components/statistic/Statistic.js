@@ -67,8 +67,8 @@ var formatTime= function(secs) {
                 {/* {(props.arrStatistic.length===0)?null:<button onClick={showDetailStatist}> Dokładnie </button>} */}
             </div>
             <div id='moreStatistic' className={(showDetail)?'active':''}>
-                <h5>{props.arrStatistic[0].catAHeader[0]}
-                    <span> ( {props.arrStatistic[0].catAHeader[1]} )</span>
+                <h5>{props.arrStatistic[0].catHeader[0]}
+                    <span> ( {props.arrStatistic[0].catHeader[1]} )</span>
                 </h5>
                 {props.arrStatistic.map((item,i)=>{
                     return(

@@ -1,29 +1,25 @@
 import React from "react";
 import { connect } from "react-redux";
-import "./catA.css"
+import "./catC.css"
 import  HeadExercise  from "../components/headExercise/HeadExercise";
 import NavExercise from "../components/NavExercise/NavExercise";
-// import NavExercise from "../NavExercise/NavExercise";
 import bgImg from '../assets/img/introduction.jpg'
-// import bgImg from '../../assets/img/introduction.jpg'
-import { DescCatA } from "../exercises/descCat/DescCatA";
+import { DescCatC } from "../exercises/descCat/DescCatC";
 
- const CatA =(props)=>{
+ const CatC =(props)=>{
     return(
     <div>
-        <DescCatA/>
+        <DescCatC/>
         <div className='bgImg' style={{backgroundImage:`url(${bgImg}) `}}></div>
         <div className='baseScreen container-fluid' >
-                    {/*----- top header = dispCat*/}
-                {/* <div className='dispCat' dangerouslySetInnerHTML={{__html:DescCatHeader[state.inputCat]}} /> */}
                 <div className='dispCat'>
                     <div>
                         <h4>{props.headerLeft}</h4>
                         <h4>{props.headerRight}</h4>
                     </div>
                 </div>
-                <NavExercise curCatReducer={'QuizCatA'}/>
-                <HeadExercise curCatReducer={'QuizCatA'}/>
+                <NavExercise curCatReducer={'QuizCatC'}/>
+                <HeadExercise curCatReducer={'QuizCatC'}/>
                <hr/>
                 {props.componentCat}
                 <hr></hr>
@@ -34,12 +30,12 @@ import { DescCatA } from "../exercises/descCat/DescCatA";
 const mapStateToProps=(state)=>{
 return(
     {
-    componentCat:state.QuizCatA.cat.subCat[state.QuizCatA.selectSubCat].component,
-    selectSubCat:state.QuizCatA.selectSubCat,
-    numQuestion:state.QuizCatA.numQuestion,
+    componentCat:state.QuizCatC.cat.subCat[state.QuizCatC.selectSubCat].component,
+    selectSubCat:state.QuizCatC.selectSubCat,
+    numQuestion:state.QuizCatC.numQuestion,
 
-    headerLeft:state.QuizCatA.cat.catHeader[0],
-    headerRight:state.QuizCatA.cat.catHeader[1]
+    headerLeft:state.QuizCatC.cat.catHeader[0],
+    headerRight:state.QuizCatC.cat.catHeader[1]
     }
 )}
 const mapDispatchToProps=(dispatch)=>(
@@ -48,4 +44,4 @@ const mapDispatchToProps=(dispatch)=>(
     }
 )
 
-export default connect(mapStateToProps,mapDispatchToProps)(CatA)
+export default connect(mapStateToProps,mapDispatchToProps)(CatC)

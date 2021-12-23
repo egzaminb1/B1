@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-import { clearStateA } from "../store/actions/actionCreaters";
+import { clearStateA, clearStateB, clearStateC, clearStatistic } from "../store/actions/actionCreaters";
 
  const Navbar =(props)=>(
     <nav className=" navbar navbar-dark navbar-expand-lg">
@@ -15,23 +15,23 @@ import { clearStateA } from "../store/actions/actionCreaters";
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-                <NavLink to="/examinA" className="nav-link" onClick={props.clearStateA}>Słuchanie</NavLink>
+                <NavLink to="/CatA" className="nav-link" onClick={props.clearStateA}>Słuchanie</NavLink>
             </li>
             <li className="nav-item"><span className="nav-link">-</span></li>
             <li className="nav-item">
-                <NavLink to="/examinA" className="nav-link" onClick={props.clearStateA}>Gramatyka</NavLink>
+                <NavLink to="/CatB" className="nav-link" onClick={props.clearStateB}>Gramatyka</NavLink>
             </li>
             <li className="nav-item"><span className="nav-link">-</span></li>
             <li className="nav-item">
-                <NavLink to="/examinA" className="nav-link" onClick={props.clearStateA}>Сzytanie</NavLink>
+                <NavLink to="/CatC" className="nav-link" onClick={props.clearStateC}>Сzytanie</NavLink>
             </li>
             <li className="nav-item"><span className="nav-link">-</span></li>
             <li className="nav-item">
-                <NavLink to="/examinA" className="nav-link" onClick={props.clearStateA}>Pisanie</NavLink>
+                <NavLink to="/CatD" className="nav-link" onClick={props.clearStatistic}>Pisanie</NavLink>
             </li>
             <li className="nav-item"><span className="nav-link">-</span></li>
             <li className="nav-item">
-                <NavLink to="/examinA" className="nav-link" onClick={props.clearStateA}>Mówienie</NavLink>
+                <NavLink to="/CatE" className="nav-link" onClick={props.clearStatistic}>Mówienie</NavLink>
             </li>
         </ul>
 
@@ -61,7 +61,10 @@ return(
 )}
 const mapDispatchToProps=(dispatch)=>(
     {
-        clearStateA:()=>dispatch(clearStateA())
+        clearStateA:()=>dispatch(clearStateA()),
+        clearStateB:()=>dispatch(clearStateB()),
+        clearStateC:()=>dispatch(clearStateC()),
+        clearStatistic:()=>dispatch(clearStatistic())
     }
 )
 

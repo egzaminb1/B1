@@ -10,13 +10,13 @@ import { UpdateTimer } from '../Timer/Timer'
     return(
         <div className='navExercise'>
             <div>
-            <button className='btnLeft' onClick={props.prev} disabled={(props.selectSubCat===0 && props.numQuestion===0)?true:false}><i className="fas fa-chevron-left"></i></button>
+            <button className='btnLeft' onClick={()=>props.prev(props.curCatReducer)} disabled={(props.selectSubCat===0 && props.numQuestion===0)?true:false}><i className="fas fa-chevron-left"></i></button>
 
             <button className='btnComeOut' onClick={()=>props.copyStatistic(props.arrStatistic)}><NavLink to='./'>Wyjdż</NavLink> </button>
 
-            <button className='btnCheck' onClick={()=>props.checkExe(UpdateTimer())} disabled={(props.isChecked)?true:false}>Sprawdż</button>
+            <button className='btnCheck' onClick={()=>props.checkExe(UpdateTimer(), props.curCatReducer)} disabled={(props.isChecked)?true:false}>Sprawdż</button>
            
-            <button className='btnRight' onClick={props.next} disabled={(props.selectSubCat+1===props.lengthSubCat && props.numQuestion+1===props.lengthQuestions)?true:false}><i className="fas fa-chevron-right"></i></button>
+            <button className='btnRight' onClick={()=>props.next(props.curCatReducer)} disabled={(props.selectSubCat+1===props.lengthSubCat && props.numQuestion+1===props.lengthQuestions)?true:false}><i className="fas fa-chevron-right"></i></button>
             </div>
             
         </div>
@@ -26,19 +26,25 @@ const mapStateToProps=(state, props)=>{
     //console.log(state)
 return(
     {
-        isChecked:state.QuizCatA.isChecked,
-        lengthSubCat:state.QuizCatA.lengthSubCat,
-        lengthQuestions:state.QuizCatA.lengthQuestions,
-        selectSubCat:state.QuizCatA.selectSubCat,
-        numQuestion:state.QuizCatA.numQuestion,
+        curCatReducer:props.curCatReducer,
+        isChecked:state[props.curCatReducer].isChecked,
+        lengthSubCat:state[props.curCatReducer].lengthSubCat,
+        lengthQuestions:state[props.curCatReducer].lengthQuestions,
+        selectSubCat:state[props.curCatReducer].selectSubCat,
+        numQuestion:state[props.curCatReducer].numQuestion,
+        // isChecked:state.QuizCatA.isChecked,
+        // lengthSubCat:state.QuizCatA.lengthSubCat,
+        // lengthQuestions:state.QuizCatA.lengthQuestions,
+        // selectSubCat:state.QuizCatA.selectSubCat,
+        // numQuestion:state.QuizCatA.numQuestion,
         arrStatistic:state[props.curCatReducer].arrStatistic
     }
 )}
 const mapDispatchToProps=(dispatch)=>(
     {
-        next:()=>dispatch(next()),
-        prev:()=>dispatch(prev()),
-        checkExe:(time)=>dispatch(checkExe(time)),
+        next:(curCatReducer)=>dispatch(next(curCatReducer)),
+        prev:(curCatReducer)=>dispatch(prev(curCatReducer)),
+        checkExe:(time, curCatReducer)=>dispatch(checkExe(time, curCatReducer)),
         btnExit:()=>dispatch(),
         copyStatistic:(arrStatistic)=>dispatch(copyStatistic(arrStatistic))
     }
