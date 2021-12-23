@@ -25,17 +25,17 @@
     width: 150px;
     text-align: right;
 }
-.subCatB2 input{
+/* .subCatB2 input{
     border: none;
     background: rgba(228,213,14,.2);
     text-align: center;
-    /* height: 1.1em; */
     max-width: 100%;
     border-radius: 5px;
-}
+} */
 .subCatB2 .questions .inp{
     font-weight: bold;
-    background: rgba(0,0,0,.1);
+    /* background: rgba(0,0,0,.1); */
+    /* background: rgba(228,213,14,.2); */
 }
 .subCatB2 .block p{
     margin-bottom: 1.2rem;
@@ -43,9 +43,9 @@
 .subCatB2 .block p:first-child{
     margin-bottom: .2rem;
 }
-.subCatB2 .block>div{
+/* .subCatB2 .block>div{
     position: relative;
-}
+} */
 .subCatB2 .block .bGreen{
     color:green;
     font-weight: bold;
@@ -54,14 +54,33 @@
     color:red;
     font-weight: bold;
 }
-.subCatB2 .block .hint{
+/* .subCatB2 .block .hint{
     color:green;
     font-style: italic;
     margin-bottom: 0;
-    position: absolute;
-    top:-20px;
-    right: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all .5s;
+} */
+.subCatB2 .block .inpShow{
+    color:green;
+    font-style: italic;
+    margin-bottom: 0;
+    height: 42px;
+    transition: height .5s;
+}
+.subCatB2 .block .inpHide{
+    color:green;
+    font-style: italic;
+    margin-bottom: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height .5s;
 }
 .subCatB2 .block textarea{
     margin-bottom: 10px;
+    background: rgba(228,213,14,.2);
+    border: none;
+    padding: 0 5px;
+    border-radius: 5px;
 }

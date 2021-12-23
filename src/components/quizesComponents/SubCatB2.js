@@ -12,12 +12,10 @@ import "./subCatB2.css";
         let sizeInp=15
         let val=(props.isChecked && props.quiz.arrAnswer[i].cls==='bGreen')?props.quiz.arrAnswer[i].answ:props.quiz.arrAnswer[i].inpWord
          val=(i===0)?props.quiz.arrAnswer[i].answ:val
-         let hint=(props.hintMode && props.isChecked)?props.quiz.arrAnswer[i].answ:null
-         hint=(props.quiz.arrAnswer[i].cls==='bGreen')?null:hint
-        //  val=(props.hintMode && props.isChecked)?props.quiz.arrAnswer[i].answ:val
+         let hint=(props.hintMode && props.isChecked && props.quiz.arrAnswer[i].cls!=='bGreen')?'inpShow':'inpHide'
         let inp=(i===0)?<TextareaAutosize aria-label="empty textarea" className='inp'  style={{resize: 'none', width: '100%'}}  value={val}></TextareaAutosize>:
         <Fragment>
-            <p className="hint">{hint}</p>
+            <p className={hint} >{props.quiz.arrAnswer[i].answ}</p>
             <TextareaAutosize aria-label="empty textarea"  className={props.quiz.arrAnswer[i].cls} placeholder='.................' style={{resize: 'none', width: '100%'}}  value={val} onChange={(e)=>(props.inpAnsw(e.target.value, i))}></TextareaAutosize>
         </Fragment>
         // let inp=(i===0)?<input  className='inp' type='text'  size={(val.length<sizeInp)?sizeInp:val.length} readOnly={true} value={val}></input>:
@@ -30,7 +28,7 @@ import "./subCatB2.css";
             return (
                 <div key={i} className={'block'}>
                 <p>{i}. {item[0]}</p>
-                <p><b>{item[1]}</b></p>
+                {(item[1])?<p><b>{item[1]}</b></p>:null}
                 <div>{answP(i)}</div>
                 {(i===0)?<hr></hr>:null}
                 </div>
