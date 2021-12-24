@@ -1,69 +1,68 @@
 
-.subCatA3 .questions{
+.subCatC1>div:first-child{
+    /* background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px; */
+}
+.subCatC1 .col-md-6>div{
     background: rgba(255, 255, 255, 0.95);
+}
+.subCatC1 .block>div, .subCatC1 .blPoints>div, .subCatC1 .template>div{
     border: solid 3px red;
     border-radius: 10px;
     box-shadow: 6px 6px 16px #888;
+    margin-bottom: 10px;
     padding: 5px 10px;
+    min-height: 350px;
+    /* min-height: 220px; */
 }
-.subCatA3 .points{
-    position: relative;
+.subCatC1.one .block>div, .subCatC1.one .blPoints>div, .subCatC1.one .template>div{
+    /* min-height: 350px; */
+    min-height: 220px;
 }
-.subCatA3 .points h5{
-    position: absolute;
-    right: 20px;
-    width: 150px;
-    text-align: right;
+.subCatC1 .template>div h5+h6{
+    background: rgba(247, 202, 202, 0.4);
+    border-radius: 10px;
+    padding: 5px;
 }
-.subCatA3 .paragraf>div{
-    line-height: 2.2em;
-    display: inline;
+.subCatC1 .block>div h6:first-child{
+    background: rgba(247, 202, 202, 0.4);
+    border-radius: 10px;
+    padding: 5px;
 }
-.subCatA3 .paragraf>div:first-child{
-    margin-left: 20px;
-}
-.subCatA3 .paragraf>div p{
-    display: inline-block;
-    position: relative;
-    margin-bottom: 0;
-}
-/* .subCatA3 .paragraf span{
-    line-height: 2.2em;
-}
-.subCatA3 .paragraf span p{
-    display: inline-block;
-    position: relative;
-    margin-bottom: 0;
-} */
-.subCatA3 .inp{
+.subCatC1 .questions .bold{
     font-weight: bold;
 }
-.subCatA3 input{
-    border: none;
-    background: rgba(228,213,14,.2);
-    text-align: center;
-    height: 1.1em;
-    border-radius: 5px;
-}
-.subCatA3 .paragraf .bGreen{
+.subCatC1 .questions .green{
     color:green;
-    font-weight: bold;
 }
-.subCatA3 .paragraf i{
-    color:green;
-    position:absolute;
-    right: 0;
-    top: -17px;
-}
-
-.subCatA3 .paragraf .red{
+.subCatC1 .questions .red{
     color:red;
-    font-weight: bold;
 }
-.subCatA3 .questions{
+.subCatC1 .block p{
+    font-style: italic;
+    transition: all .2s linear;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+.subCatC1 .block p:hover{
+    box-shadow: 2px 2px 5px #888;
+}
+.headSubCat{
+    padding: 10px ;
+    margin-bottom: 5px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+}
+.headSubCat h5:first-child{
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    
+}
+.subCatC1 .questions{
     position: relative;
 }
-.subCatA3 .questions .mask{
+.subCatC1 .questions .mask{
     position: absolute;
     top: 0;
     bottom: 0;
@@ -72,90 +71,3 @@
     z-index: 10;
     background: rgba(0,0,0,.1);
 }
-/* 
-.paragraf input:focus{
-    color:black;
-}
-.paragraf .green{
-    color:green;
-}
-.paragraf .bGreen{
-    color:green;
-    font-weight: bold;
-}
-.paragraf .red{
-    color:red;
-}
-.subCatA1{
-    box-sizing: border-box;
-    position: relative;
-    box-shadow: 0 28px 28px rgb(0 0 0 / 20%);
-}
-.subCatA1 .checked{
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    background-color: rgba(13, 71, 71, 0.1);
-}
-.subCatA1 h5{
-    padding: 0px 15px;
-    margin: 15px 0;
-}
-.subCatA1 .block{
-    box-sizing: border-box;
-    display: inline-block;
-    width: 50%;
-    padding: 0 20px;
-}
-
-.subCatA1 .row{
-    border-radius: 15px;
-    border: 5px solid rgb(0 100 100);
-}
-.subCatA1 .points{
-    position: absolute;
-    top:-165px;
-    left: 3px;
-    background-color: rgba(66, 221, 221, .4);
-    padding: 10px;
-}
-.subCatA1 .template{
-    background-color: rgba(66, 221, 221, .4);
-    padding-top: 10px;
-}
-.subCatA1 .template h5{
-    margin: 0;
-}
-
-@media only screen and (min-width: 640px) {
-    .subCatA1 .block:last-child{
-        border-left:5px solid rgb(0 100 100)
-    }
-    .subCatA1 .row{
-        border-bottom: none;
-    }
-    .subCatA1 .row:last-child{
-        border-bottom:5px solid rgb(0 100 100)
-    }
-  }
-@media only screen and (max-width: 640px) {
-    .subCatA1 .block {
-      display: block;
-      width: 100%;
-      border-bottom:5px solid rgb(0 100 100)
-    }
-    .subCatA1 .row{
-        border: none;
-    }
-    .subCatA1 .row:first-child{
-        border-top:5px solid rgb(0 100 100)
-    }
-    .subCatA1 .points{
-        position: unset;
-        padding: 20px 0;
-        background-color:unset;
-    }
-  }
- */

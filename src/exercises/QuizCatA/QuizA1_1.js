@@ -6,7 +6,7 @@ export const QuizA1_1 = {
             'Uwaga! Nagranie zostanie odtworzone tylko jeden raz.'],
     template:{  point:0.5,
                 iterate:1,
-                pH:'1_1 Ta wypowiedź jest typowa:',
+                pH:'Ta wypowiedź jest typowa:',
                 p:[
                     {word:'w tramwaju',cls:''},
                     {word:'w szkole',cls:'bold'},

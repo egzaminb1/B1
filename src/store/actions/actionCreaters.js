@@ -1,4 +1,4 @@
-import { AC_BOLD_CLASS, AC_BOLD_CLASS_A4, AC_CHECK_A3, AC_CHECK_A4, AC_CHECK_B1, AC_CHECK_B2, AC_CHECK_C1, AC_CHECK_EXE,  AC_CLEAR_STATE_A, AC_CLEAR_STATE_B, AC_CLEAR_STATE_C, AC_CLEAR_STATISTIC, AC_COPY_STATISTIC, AC_HINT_MODE, AC_HINT_MODE_B, AC_HINT_MODE_C, AC_INP_ANSW, AC_INP_ANSW_B1, AC_INP_ANSW_C1, AC_NEXT, AC_NEXT_B, AC_NEXT_C, AC_NEXT_D, AC_NEXT_E, AC_PREV, AC_PREV_B, AC_PREV_C, AC_PREV_D, AC_PREV_E, AC_SAVE_NUMQUESTION, AC_SAVE_NUMQUESTION_B, AC_SAVE_NUMQUESTION_C, AC_SAVE_SELECT_D, AC_SAVE_SELECT_E, AC_SAVE_SUBCAT, AC_SAVE_SUBCAT_B, AC_SAVE_SUBCAT_C } from "./actionTypes";
+import { AC_BOLD_CLASS, AC_BOLD_CLASS_A4, AC_BOLD_CLASS_C1, AC_CHECK_A3, AC_CHECK_A4, AC_CHECK_B1, AC_CHECK_B2, AC_CHECK_C1, AC_CHECK_EXE,  AC_CLEAR_STATE_A, AC_CLEAR_STATE_B, AC_CLEAR_STATE_C, AC_CLEAR_STATISTIC, AC_COPY_STATISTIC, AC_HINT_MODE, AC_HINT_MODE_B, AC_HINT_MODE_C, AC_INP_ANSW, AC_INP_ANSW_B1, AC_INP_ANSW_C1, AC_NEXT, AC_NEXT_B, AC_NEXT_C, AC_NEXT_D, AC_NEXT_E, AC_PREV, AC_PREV_B, AC_PREV_C, AC_PREV_D, AC_PREV_E, AC_SAVE_NUMQUESTION, AC_SAVE_NUMQUESTION_B, AC_SAVE_NUMQUESTION_C, AC_SAVE_SELECT_D, AC_SAVE_SELECT_E, AC_SAVE_SUBCAT, AC_SAVE_SUBCAT_B, AC_SAVE_SUBCAT_C } from "./actionTypes";
 
 export const hintModeHandler=(curCatReducer)=>(
     (dispatch, getState)=>{
@@ -15,6 +15,8 @@ export const hintModeHandler=(curCatReducer)=>(
             dispatch(hintModeB())
         }else if(curCatReducer==='QuizCatC'){
             dispatch(hintModeC())
+            if(isChecked && selectSubCat===0)
+            dispatch(checkC1(0, false))
         }
     }
 )
@@ -212,4 +214,7 @@ export const saveSubCatC=(numSubCat)=>(
 )
 export const saveNumQuestionC=(numQuestion)=>(
     {type:AC_SAVE_NUMQUESTION_C, numQuestion}
+)
+export const boldClassC1=(keyCard, keyP)=>(
+    {type:AC_BOLD_CLASS_C1, keyCard, keyP}
 )

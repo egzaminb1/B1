@@ -8,7 +8,7 @@ export const QuizA2_1 = {
     
     template:{  point:1,
         iterate:2,
-        pH:'2_1 Ta osoba poleca bar Dym, ponieważ: ',
+        pH:'Ta osoba poleca bar Dym, ponieważ: ',
         p:[
             {word:'jest tu dużo alkoholu',cls:''},
             {word:'jest tu duży wybór nietypowych alkoholi',cls:'bold'},

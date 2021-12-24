@@ -8,7 +8,7 @@ export const QuizA2_2 = {
     
     template:{  point:1,
         iterate:2,
-        pH:'2_1 Dziennikarz przeprowadza wywiad z: ',
+        pH:'Dziennikarz przeprowadza wywiad z: ',
         p:[
             {word:'lekarzem',cls:'bold'},
             {word:'kierowcą',cls:''},

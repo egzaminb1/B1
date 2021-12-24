@@ -82,7 +82,7 @@ export const  QuizCatAReducer=(state=initialState, action)=>{
             return(n)
         })
         return(i)
-    })
+        })
         return curQuiz
         }else if(selectSubCat===2){
             curQuiz={...currentQuiz}

@@ -51,6 +51,7 @@ import "./subCatA4.css";
                                isChecked={props.isChecked}
                                curRightPoints={props.curRightPoints}
                                points={props.points}
+                               curCatReducer={'QuizCatA'}
                         ></Points>
                     </div>
                     <hr/>

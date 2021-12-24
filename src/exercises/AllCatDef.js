@@ -28,6 +28,9 @@ import { QuizB2_1 } from "./quizCatB/QuizB2_1";
 import { QuizB2_2 } from "./quizCatB/QuizB2_2";
 import { QuizB2_3 } from "./quizCatB/QuizB2_3";
 import { QuizC1_1 } from "./quizCatC/QuizC1_1";
+import { QuizC1_2 } from "./quizCatC/QuizC1_2";
+import { QuizC1_3 } from "./quizCatC/QuizC1_3";
+import { QuizC1_4 } from "./quizCatC/QuizC1_4";
 import { QuizD1 } from "./quizCatD/QuizD1";
 import { QuizD2 } from "./quizCatD/QuizD2";
 import { QuizD3 } from "./quizCatD/QuizD3";
@@ -96,12 +99,12 @@ import { QuizE6 } from "./quizCatE/QuizE6";
             {
                 headQuiz:['Zadania z jednostkami wyboru wielokrotnego',`Wybór informacyjny - pojedyncze napisy`],
                 component:<SubCatC1></SubCatC1>,
-                quizes:[QuizC1_1, QuizC1_1] 
+                quizes:[QuizC1_1, QuizC1_2, QuizC1_3, QuizC1_4] 
             },
             {
                 headQuiz:['Zadania z jednostkami wyboru wielokrotnego',`Wybór informacyjny - pojedyncze napisy`],
                 component:<SubCatC1></SubCatC1>,
-                quizes:[QuizC1_1, QuizC1_1, QuizC1_1, QuizC1_1] 
+                quizes:[QuizC1_1, QuizC1_1] 
             }
         ]
     }

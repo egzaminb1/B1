@@ -63,6 +63,7 @@
 .subCatA4 .questions .bold{
     font-weight: 900;
     font-family: 'Roboto Slab', serif;
+    text-shadow: 2px 2px 4px grey;
 }
 .subCatA4 .questions .green{
     color:green;

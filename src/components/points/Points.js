@@ -50,7 +50,9 @@ return(
         isChecked:props.isChecked,
         curRightPoints:props.curRightPoints,
         points:props.points,
-        numQuestion:state.QuizCatA.numQuestion
+        numQuestion:state[props.curCatReducer].numQuestion
+        // numQuestion:state.QuizCatA.numQuestion
+
         // timerOfComponent:state.QuizCatA.timerOfComponent,
         // isChecked:state.QuizCatA.isChecked,
         // curRightPoints:state.QuizCatA.curRightPoints,

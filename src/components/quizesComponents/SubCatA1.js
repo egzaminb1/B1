@@ -59,6 +59,7 @@ import "./subCatA1.css";
                                isChecked={props.isChecked}
                                curRightPoints={props.curRightPoints}
                                points={props.points}
+                               curCatReducer={'QuizCatA'}
                         ></Points>
                     </div>
                     <div className='template col-sm-6'>
