@@ -5,6 +5,7 @@ import  SubCatA4  from "../components/quizesComponents/SubCatA4";
 import  SubCatB1  from "../components/quizesComponents/SubCatB1";
 import SubCatB2 from "../components/quizesComponents/SubCatB2";
 import  SubCatC1  from "../components/quizesComponents/SubCatC1";
+import SubCatC2 from "../components/quizesComponents/SubCatC2";
 import { QuizA1_1 } from "./QuizCatA/QuizA1_1";
 import { QuizA1_2 } from "./QuizCatA/QuizA1_2";
 import { QuizA1_3 } from "./QuizCatA/QuizA1_3";
@@ -23,7 +24,20 @@ import { QuizA4_5 } from "./QuizCatA/QuizA4_5";
 import { QuizA4_6 } from "./QuizCatA/QuizA4_6";
 import { QuizA4_7 } from "./QuizCatA/QuizA4_7";
 import { QuizB1_1 } from "./quizCatB/QuizB1_1";
+import { QuizB1_10 } from "./quizCatB/QuizB1_10";
+import { QuizB1_11 } from "./quizCatB/QuizB1_11";
+import { QuizB1_12 } from "./quizCatB/QuizB1_12";
+import { QuizB1_13 } from "./quizCatB/QuizB1_13";
+import { QuizB1_14 } from "./quizCatB/QuizB1_14";
+import { QuizB1_15 } from "./quizCatB/QuizB1_15";
 import { QuizB1_2 } from "./quizCatB/QuizB1_2";
+import { QuizB1_3 } from "./quizCatB/QuizB1_3";
+import { QuizB1_4 } from "./quizCatB/QuizB1_4";
+import { QuizB1_5 } from "./quizCatB/QuizB1_5";
+import { QuizB1_6 } from "./quizCatB/QuizB1_6";
+import { QuizB1_7 } from "./quizCatB/QuizB1_7";
+import { QuizB1_8 } from "./quizCatB/QuizB1_8";
+import { QuizB1_9 } from "./quizCatB/QuizB1_9";
 import { QuizB2_1 } from "./quizCatB/QuizB2_1";
 import { QuizB2_2 } from "./quizCatB/QuizB2_2";
 import { QuizB2_3 } from "./quizCatB/QuizB2_3";
@@ -31,6 +45,9 @@ import { QuizC1_1 } from "./quizCatC/QuizC1_1";
 import { QuizC1_2 } from "./quizCatC/QuizC1_2";
 import { QuizC1_3 } from "./quizCatC/QuizC1_3";
 import { QuizC1_4 } from "./quizCatC/QuizC1_4";
+import { QuizC2_1 } from "./quizCatC/QuizC2_1";
+import { QuizC2_2 } from "./quizCatC/QuizC2_2";
+import { QuizC2_3 } from "./quizCatC/QuizC2_3";
 import { QuizD1 } from "./quizCatD/QuizD1";
 import { QuizD2 } from "./quizCatD/QuizD2";
 import { QuizD3 } from "./quizCatD/QuizD3";
@@ -83,7 +100,7 @@ import { QuizE6 } from "./quizCatE/QuizE6";
             {
                 headQuiz:['Transformacje',`To najczęściej spotykany typ zadania. W nawiasie podane są formy podstawowe rzeczowników, czasowników, zaimków, przymiotników, liczebników, przysłówków należy utworzyć poprawną formę tych wyrazów.`],
                 component:<SubCatB1></SubCatB1>,
-                quizes:[QuizB1_1, QuizB1_2] 
+                quizes:[QuizB1_1, QuizB1_2, QuizB1_3, QuizB1_4, QuizB1_5, QuizB1_6, QuizB1_7, QuizB1_8, QuizB1_9, QuizB1_10, QuizB1_11, QuizB1_12, QuizB1_13, QuizB1_14, QuizB1_15] 
             },
             {
                 headQuiz:['Transformacje',`Tym typem transformacji jest przekształcenie zdań przy użyciu podanych wyrazów. W poleceniu znajduje się wzór, według którego powinno się przekształcać zdania, np. wszystkie transformacje należy utworzyć w formie trybu przypuszczającego. Trzeba pamiętać o dodatkowych operacjach, np. zamianie czasownika na rzeczownik, zamianie rzeczowników na odpowiednie zaimki.`],
@@ -103,8 +120,8 @@ import { QuizE6 } from "./quizCatE/QuizE6";
             },
             {
                 headQuiz:['Zadania z jednostkami wyboru wielokrotnego',`Wybór informacyjny - pojedyncze napisy`],
-                component:<SubCatC1></SubCatC1>,
-                quizes:[QuizC1_1, QuizC1_1] 
+                component:<SubCatC2></SubCatC2>,
+                quizes:[QuizC2_1, QuizC2_2, QuizC2_3] 
             }
         ]
     }

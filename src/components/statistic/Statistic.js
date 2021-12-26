@@ -17,6 +17,15 @@ var formatTime= function(secs) {
      const[open, setOpen]=useState(true)
      const[showDetail, setShowDetail]=useState(false)
 
+     const roundNumb=(num)=>{
+        //  num = 28.45678
+        //  debugger
+        if(Math.trunc(num)!==num){
+            num=num.toFixed(1)
+        }
+        return num
+     }
+
      const showDetailStatist=()=>{
         // let divMore=document.getElementById('moreStatistic')
         // divMore.className=(divMore.className==='active')?'':'active'
@@ -54,7 +63,7 @@ var formatTime= function(secs) {
                     </tr>
                     <tr>
                         <td>Procent skuteczności :</td>
-                        <td>{(sumAllPoints===0)?'0':Math.round((sumRightPoints/sumAllPoints)*100)}%</td>
+                        <td>{(sumAllPoints===0)?'0':roundNumb(Math.round((sumRightPoints/sumAllPoints)*100))}%</td>
                     </tr>
                     <tr>
                         <td>Całkowity czas wykonywania zadań :</td>
@@ -93,7 +102,7 @@ var formatTime= function(secs) {
                     </tr>
                     <tr>
                         <td>Procent skuteczności :</td>
-                        <td>{(item.sumPoints===0)?'0':(item.curRightPoints/item.sumPoints)*100}%</td>
+                        <td>{(item.sumPoints===0)?'0':roundNumb((item.curRightPoints/item.sumPoints)*100)}%</td>
                     </tr>
                     <tr>
                         <td>Czas wykonywania :</td>

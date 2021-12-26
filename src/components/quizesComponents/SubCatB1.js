@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { connect } from "react-redux";
 import {inpAnswB1 } from "../../store/actions/actionCreaters";
 import  Points  from "../points/Points";
@@ -80,6 +80,12 @@ import "./subCatB1.css";
                 ></Points>
                 <hr></hr>
             </div>
+            {(props.img)?
+            <Fragment>
+                <h5>{props.img[0]}</h5>
+            <   img className={(props.img[2])?props.img[2]:''} src={props.img[1]} alt=""></img>
+            </Fragment>:null
+            }
             {questionsDiv(props.quiz.text)}
         </div>
     </div>
@@ -98,7 +104,8 @@ return(
     quantity:state.QuizCatB.currentQuiz.arrAnswer.length-1,
     timerOfComponent:state.QuizCatB.timerOfComponent,
     curRightPoints:state.QuizCatB.curRightPoints,
-    points:state.QuizCatB.currentQuiz.template.point
+    points:state.QuizCatB.currentQuiz.template.point,
+    img:(state.QuizCatB.currentQuiz.img)?state.QuizCatB.currentQuiz.img:null
     }
 )}
 const mapDispatchToProps=(dispatch)=>(

@@ -1,6 +1,6 @@
 import { catC} from "../../exercises/AllCatDef"
 import { QuizC1_1 } from "../../exercises/quizCatC/QuizC1_1"
-import { AC_BOLD_CLASS_C1, AC_CHECK_C1, AC_CLEAR_STATE_C, AC_HINT_MODE_C, AC_INP_ANSW_C1, AC_NEXT_C, AC_PREV_C, AC_SAVE_NUMQUESTION_C, AC_SAVE_SUBCAT_C } from "../actions/actionTypes"
+import { AC_BOLD_CLASS_C1, AC_BOLD_CLASS_C2, AC_CHECK_C1, AC_CHECK_C2, AC_CLEAR_STATE_C, AC_HINT_MODE_C, AC_INP_ANSW_C1, AC_NEXT_C, AC_PREV_C, AC_SAVE_NUMQUESTION_C, AC_SAVE_SUBCAT_C } from "../actions/actionTypes"
 
 const initialState={
     cat:catC,
@@ -34,9 +34,9 @@ export const  QuizCatCReducer=(state=initialState, action)=>{
     let headQuiz=state.cat.subCat[selectSubCat].headQuiz[0]
 
     const currentQuizFunc=(currentQuiz=state.currentQuiz, selectSubCat=state.selectSubCat)=>{
-        //debugger
+        //  debugger
         let curQuiz
-        if(selectSubCat===0 || selectSubCat===1){
+        if(selectSubCat===0){
             curQuiz={...currentQuiz}
             curQuiz.card=[...currentQuiz.card]
             curQuiz.card.map((nCard,i)=>{
@@ -48,6 +48,35 @@ export const  QuizCatCReducer=(state=initialState, action)=>{
                     })
                 return(i)
                 })
+            return curQuiz
+        }else if(selectSubCat===1){
+            curQuiz={...currentQuiz}
+            if(!curQuiz.arrAnswer){
+                curQuiz.answer=[...currentQuiz.answer]
+                let arrAnswer=curQuiz.answer.map((item,i)=>{
+                    let arrWords=item.map((word, n)=>{
+                        if(word.split('').includes('*')){
+                            let nWord=word.split('')
+                            nWord.pop()
+                            return {word:nWord.join(''), cls:'', answ:true}
+                        }else return {word, cls:'', answ:false}
+                    })
+                    return arrWords
+                })
+                // return {...curQuiz, arrAnswer}
+                curQuiz.arrAnswer=arrAnswer
+            }else {
+                // debugger
+                curQuiz.arrAnswer=[...currentQuiz.arrAnswer]
+                let arrGroupWords=curQuiz.arrAnswer.map((item,i)=>{
+                    let newItem=item.map((str,n)=>{
+                        return {...str}
+                    })
+                    return newItem
+                })
+                // console.log(arrGroupWords)
+                curQuiz.arrAnswer=arrGroupWords
+            }
             return curQuiz
         }
     }
@@ -95,6 +124,7 @@ export const  QuizCatCReducer=(state=initialState, action)=>{
             {...state, numQuestion, selectSubCat, isChecked:false, hintMode:false, lengthQuestions, currentQuiz})
 
         case AC_HINT_MODE_C:
+            // currentQuiz=currentQuizFunc(state.currentQuiz, selectSubCat)
              let hint=(state.hintMode===true)?false:true
             return(
             {...state, hintMode:hint})
@@ -131,9 +161,8 @@ export const  QuizCatCReducer=(state=initialState, action)=>{
                 if(!state.isChecked){
                 let k1=action.keyCard
                 let k2=action.keyP
-                currentQuiz=currentQuizFunc(state.currentQuiz)
-                newState.currentQuiz={...currentQuiz}
-                //console.log(curQuiz)
+                newState.currentQuiz=currentQuizFunc(state.currentQuiz)
+                // newState.currentQuiz={...currentQuiz}
                 newState.currentQuiz.card[k1].p[0].cls=''
                 newState.currentQuiz.card[k1].p[1].cls=''
                 newState.currentQuiz.card[k1].p[2].cls=''
@@ -141,11 +170,22 @@ export const  QuizCatCReducer=(state=initialState, action)=>{
                 }
                 return(newState)
 
+        case AC_BOLD_CLASS_C2:
+                if(!state.isChecked){
+                let k1=action.keyStr
+                let k2=action.keyW
+                newState.currentQuiz=currentQuizFunc(state.currentQuiz)
+                newState.currentQuiz.arrAnswer[k1][0].cls=''
+                newState.currentQuiz.arrAnswer[k1][1].cls=''
+                newState.currentQuiz.arrAnswer[k1][2].cls=''
+                newState.currentQuiz.arrAnswer[k1][k2].cls='bold'
+                }
+                return(newState)
+
         case AC_CHECK_C1:
-            let arrCards
             currentQuiz=currentQuizFunc(state.currentQuiz)
             newState.currentQuiz={...currentQuiz}
-            arrCards=state.currentQuiz.card.map((card, i)=>{
+            state.currentQuiz.card.map((card, i)=>{
                 card.p.map((str, n)=>{
                     let newStr=newState.currentQuiz.card[i].p[n]
                     if(str.answer && str.cls.includes('bold')){
@@ -161,13 +201,52 @@ export const  QuizCatCReducer=(state=initialState, action)=>{
                         }
                     if(!str.answer && str.cls.includes('bold'))
                     newStr.cls=newStr.cls+' red'
-                    return(newStr)
+                    return
                 })
-                return(arrCards)
+                return
             })
             if(action.permit){
             pointForAnswer=newState.currentQuiz.template.point
             quantity=state.currentQuiz.card.length
+            newState.isChecked=true
+            newState.timerOfComponent=action.time
+            curRightPoints=rightAnswers*pointForAnswer
+            newState.curRightPoints=curRightPoints
+            newState.arrStatistic=[...state.arrStatistic]
+            statistic={catHeader, headQuiz, selectSubCat:state.selectSubCat, numQuestion:state.numQuestion, quantity, points:pointForAnswer, curRightPoints, sumPoints:quantity*pointForAnswer, timerOfComponent:action.time }
+            newState.arrStatistic.push(statistic)
+            }
+            return(newState)
+
+        case AC_CHECK_C2:
+            // let arrCards
+            newState.currentQuiz=currentQuizFunc(state.currentQuiz)
+            let newArrAnswer=state.currentQuiz.arrAnswer.map((arrStr, i)=>{
+                let newWords=arrStr.map((str, n)=>{
+                    // let newStr=newState.currentQuiz.arrStr[i].p[n]
+                    // console.log(arrStr)
+                    let newWord=arrStr[n]
+                    if(str.answ && str.cls.includes('bold')){
+                        newWord.cls=newWord.cls+' green'
+                        rightAnswers++
+                    }else{
+                        if(str.answ && state.hintMode)
+                        newWord.cls=newWord.cls+' green'
+                        else{
+                            if(str.answ && !state.hintMode)
+                            newWord.cls=''
+                        }
+                        }
+                    if(!str.answ && str.cls.includes('bold'))
+                    newWord.cls=newWord.cls+' red'
+                    return(newWord)
+                })
+                return(newWords)
+            })
+            newState.currentQuiz.arrAnswer=[...newArrAnswer]
+            if(action.permit){
+            pointForAnswer=newState.currentQuiz.template.point
+            quantity=state.currentQuiz.arrAnswer.length
             newState.isChecked=true
             newState.timerOfComponent=action.time
             curRightPoints=rightAnswers*pointForAnswer

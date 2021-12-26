@@ -1,8 +1,6 @@
-// import trackA3_1 from '../../assets/audio/catA3_1.mp3';
-// import trackA3_int from '../../assets/audio/catA3intrudaction.mp3';
+
 
 export const QuizB1_1 = {
-    // tracks:[trackA3_int, trackA3_1],
     header:['Proszę wykonać zadanie zgodnie z podanym przykładem.',''],
     
     template:{  point:0.5},
