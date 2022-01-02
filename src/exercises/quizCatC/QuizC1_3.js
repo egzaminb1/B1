@@ -24,12 +24,12 @@ export const QuizC1_3 = {
                 ]
             },
             {
-                pH:'Od kilku lat miłośnicy tytoniu czują się dyskryminowani w samolotach. Być może zainteresuje ich oferta rozpoczynającej działalność linii lotniczej z Disseldorfu, która chce dać im prawo do latania w oparach dymu.',
+                pH:'Od kilku lat miłośnicy tytoniu czują się dyskryminowani w samolotach. Być może zainteresuje ich oferta rozpoczynającej działalność linii lotniczej z Dusseldorfu, która chce dać im prawo do latania w oparach dymu.',
                 pQ:'Ten tekst informuje, że:',
                 p:[
-                    {word:'nowa linia lotnicza z Diisseldorfu chce zlikwidować zakaz palenia w swoich samolotach.' ,cls:'' ,answer:true},
-                    {word:'w samolotach do Diisseldorfu można palić.' ,cls:'' ,answer:false},
-                    {word:'linia lotnicza z Diisseldorfu chce prawnie walczyć z dyskryminacją palaczy.' ,cls:'' ,answer:false}
+                    {word:'nowa linia lotnicza z Dusseldorfu chce zlikwidować zakaz palenia w swoich samolotach.' ,cls:'' ,answer:true},
+                    {word:'w samolotach do Dusseldorfu można palić.' ,cls:'' ,answer:false},
+                    {word:'linia lotnicza z Dusseldorfu chce prawnie walczyć z dyskryminacją palaczy.' ,cls:'' ,answer:false}
                 ]
             },
             {
@@ -96,7 +96,7 @@ export const QuizC1_3 = {
                 ]
             },
             {
-                pH:'Diecie śródziemnomorskiej, uważanej przez lekarzy za jedną z najzdrowszych, grozi zniknięcie. Przygotowanie posiłków według jej receptur wymaga zbyt wiele wysitku i ludzie coraz częściej sięgają po niezdrowe, ale szybkie dania typu fast food.',
+                pH:'Diecie śródziemnomorskiej, uważanej przez lekarzy za jedną z najzdrowszych, grozi zniknięcie. Przygotowanie posiłków według jej receptur wymaga zbyt wiele wysiłku i ludzie coraz częściej sięgają po niezdrowe, ale szybkie dania typu fast food.',
                 pQ:'Ten tekst informuje, że dieta śródziemnomorska:',
                 p:[
                     {word:'już nie istnieje.' ,cls:'' ,answer:false},

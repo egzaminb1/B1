@@ -38,7 +38,7 @@ export const QuizC1_2 = {
                 p:[
                     {word:'samodzielnie może gotować i zwiedzać muzeum.' ,cls:'' ,answer:false},
                     {word:'może pomagać rodzicom w kuchni.' ,cls:'' ,answer:true},
-                    {word:'lubi spacerować polesie i umie naprawić radio.' ,cls:'' ,answer:false}
+                    {word:'lubi spacerować po lesie i umie naprawić radio.' ,cls:'' ,answer:false}
                 ]
             },
             {

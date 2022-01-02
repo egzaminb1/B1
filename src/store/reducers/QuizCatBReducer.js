@@ -132,9 +132,15 @@ export const  QuizCatBReducer=(state=initialState, action)=>{
         
         case AC_CHECK_B1:
             newState.currentQuiz=currentQuizFunc()
-                let x
-                for(x of newState.currentQuiz.arrAnswer){
-                    if(x.answ.toLowerCase()===x.inpWord.toLowerCase()){
+                // let x
+                for(let x of newState.currentQuiz.arrAnswer){
+                    let b1_answ=x.answ.toLowerCase().split('')
+                    .filter(function(n) { return n !== ' ' && n !== '' && n !== '"' && n !== `'` && n !== `,` && n !== `;` && n !== `:`  && n !== `.`}).join('')
+                    let b1_inpWord=x.inpWord.toLowerCase().split('')
+                    .filter(function(n) { return n !== ' ' && n !== '' && n !== '"' && n !== `'` && n !== `,` && n !== `;` && n !== `:`  && n !== `.`}).join('')
+
+                    // if(x.answ.toLowerCase()===x.inpWord.toLowerCase()){
+                    if(b1_answ===b1_inpWord){
                         x.cls='bGreen'
                         rightAnswers++
                     }else x.cls='red'

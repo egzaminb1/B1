@@ -2,17 +2,16 @@
 .baseScreen{
     position: relative;
 }
-.bgImg{
+/* .bgImg{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: fixed;
     height: 100vh;
     width: 100vw;
-    /* width: 100%; */
     z-index: -20;
     top: 0;
-}
+} */
 .dispCat{
     /* background-color: rgba(66, 221, 221, .4); */
 }

@@ -6,6 +6,13 @@
     box-shadow: 6px 6px 16px #888;
     padding: 5px 10px;
 }
+.subCatC2 .questions{
+    background: rgba(255, 255, 255, 0.95);
+    border: solid 3px red;
+    border-radius: 10px;
+    box-shadow: 6px 6px 16px #888;
+    padding: 5px 10px;
+}
 .subCatC2 .points{
     position: relative;
 }

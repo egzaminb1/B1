@@ -1,8 +1,4 @@
 
-.subCatC1>div:first-child{
-    /* background: rgba(255, 255, 255, 0.95);
-    border-radius: 10px; */
-}
 .subCatC1 .col-md-6>div{
     background: rgba(255, 255, 255, 0.95);
 }

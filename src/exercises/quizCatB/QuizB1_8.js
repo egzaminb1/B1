@@ -16,7 +16,7 @@ export const QuizB1_8 = {
         `· bo .... (umieć) powiedzieć „przepraszam”;`,
         `· bo .... (pracować) tylko 8 godzin dziennie, a po pracy .... (wracać) od razu do domu;`,
         `· ponieważ nie .... (jeździć) samochodem jak wariat;`,
-        `· bo .... (wiedzieć), że ja .... (bać się) pająków i nie .... (śmiaćsię) z tego;`,
+        `· bo .... (wiedzieć), że ja .... (bać się) pająków i nie .... (śmiać się) z tego;`,
         `· bo nigdy mnie nie .... (krytykować).`,
         ``,
         `Za co kocham Martę? Kocham ją...`,

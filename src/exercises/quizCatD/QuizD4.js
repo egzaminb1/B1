@@ -7,7 +7,7 @@ export const QuizD4 = {
     ],
     exercise2:[
         ['Proszę napisać zaproszenie dla swojego pracodawcy na uroczystość z okazji odejścia na emeryturę.', 30],
-        ['Proszę zrelacjonować |opisać] swoją ostatnią podróż.', 170]
+        ['Proszę zrelacjonować (opisać) swoją ostatnią podróż.', 170]
     ],
     exercise3:[
         ['Wujek z bardzo daleka przyjechał na Pana/Pani urodziny. Proszę napisać kartkę z krótkim podziękowaniem.', 20],

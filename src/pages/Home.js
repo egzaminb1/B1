@@ -59,7 +59,7 @@ import { clearStateA, clearStateB, clearStateC, clearStatistic } from "../store/
         </NavLink>
             <div className='col-md-6 right'>
                 <p>
-                Ćwiczenia sprawdzające umiejętności gramatyczne zostały zamieszczone w części B. Znajdująsię tu zadania, w których trzeba wybrać poprawną formę (wybór wielokrotny, wybór z ramki) lub ją stworzyć (zadaniaz lukami, transformacje).
+                Ćwiczenia sprawdzające umiejętności gramatyczne zostały zamieszczone w części B. Znajdują się tu zadania, w których trzeba wybrać poprawną formę (wybór wielokrotny, wybór z ramki) lub ją stworzyć (zadania z lukami, transformacje).
                 </p>
                 <NavLink to="/CatB" className="nav-link" onClick={props.clearStateB}><button className='myBtn'>Rozpocznij</button></NavLink>
             </div>
@@ -75,7 +75,7 @@ import { clearStateA, clearStateB, clearStateC, clearStatistic } from "../store/
             </div>
         </NavLink>
             <div className='col-md-6 right'>
-            <p>Część C zawiera wszystkie typy zadań testujących kompetencję w zakresie rozumienia tekstów pisanych, które mogą pojawić się podczas egzaminu (prawda/fałsz, wybór wielokrotny, dobieranie informacji, zadania z lukami). Wybrane ćwiczenia to wzorcowe formy pisemne, które są wymagane na poziomie Bl (list nieoficjalny formalny, recenzja, podanie). Tym samym, sprawdzając swoje umiejętności w zakresie rozumienia tekstu pisanego, można przypomnieć sobie reguły obowiązujące przytworzeniu niektórych form pisemnych.</p>
+            <p>Część C zawiera wszystkie typy zadań testujących kompetencję w zakresie rozumienia tekstów pisanych, które mogą pojawić się podczas egzaminu (prawda/fałsz, wybór wielokrotny, dobieranie informacji, zadania z lukami). Wybrane ćwiczenia to wzorcowe formy pisemne, które są wymagane na poziomie B1 (list nieoficjalny formalny, recenzja, podanie). Tym samym, sprawdzając swoje umiejętności w zakresie rozumienia tekstu pisanego, można przypomnieć sobie reguły obowiązujące przytworzeniu niektórych form pisemnych.</p>
             <NavLink to="/CatC" className="nav-link" onClick={props.clearStateC}><button className='myBtn'>Rozpocznij</button></NavLink>
             </div>
         </div>

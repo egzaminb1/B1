@@ -15,7 +15,7 @@ export const DescCatE=()=>{
             <h5>Czas przeznaczony na wykonanie zadań - 15 min</h5>
             <h5>Warunkiem zdania egzaminu jest uzyskanie pozytywnego wyniku (minimum 60%, czyli 24p.) z każdej części egzaminu</h5>
             <h4>Ogólny opis umiętności</h4>
-            <p>Zdający na poziomie B1 powinni umieć posługiwaćsię językiem polskim w typowych sytuacjach komunikacyjnych w sposób płynny, nieutrudniający komunikacji. Muszą spełniać wymagania zawarte w Standardach wymagań egzaminacyjnych".</p>
+            <p>Zdający na poziomie B1 powinni umieć posługiwać się językiem polskim w typowych sytuacjach komunikacyjnych w sposób płynny, nieutrudniający komunikacji. Muszą spełniać wymagania zawarte w Standardach wymagań egzaminacyjnych".</p>
             <h4>Zdający powinni umieć:</h4>
             <ul>
                 <li>rozpoczynać i kończyć rozmowę, a także brać w niej udział (wyrażać własne opinie, wymieniać informacje na znane i związane z zainteresowaniami tematy);</li>
@@ -31,7 +31,7 @@ export const DescCatE=()=>{
             <h4>Wskazówki dla przygotowujących się do egzaminu</h4>
             <h5>Budowa egzaminu ustnego i typy zadań</h5>
             <p>Komisja składa się zwykle z trzech osób, ale ze zdającym rozmawia tylko jedna z nich, chociaż w interakcję włącza się jeszcze jeden z egzaminatorów. Wypowiedzi oceniają niezależnie od siebie dwie osoby. Oceniane są: sprawność komunikacyjna, wykonanie zadania, poprawność gramatyczna, słownictwo, wymowa i intonacja.</p>
-            <p>Przed przystąpieniem do egzaminu zdający może przygotować swoją wypowiedź — ma na to kilka minut. Na początku egzaminator zadaje kilka pytań „rozgrzewających” i służących nawiązaniu kontaktu. Dotyczyć one mogą np. zainteresowania językiem polskim czy wykonywanego zawodu. Ta część wypowiedzi nie podlega ocenie. Egzamin ustny polega nawylosowaniu zestawu, w którym znajdują się trzy zadania (należy wykonać wszystkie trzy w dowolnej kolejności):</p>
+            <p>Przed przystąpieniem do egzaminu zdający może przygotować swoją wypowiedź — ma na to kilka minut. Na początku egzaminator zadaje kilka pytań „rozgrzewających” i służących nawiązaniu kontaktu. Dotyczyć one mogą np. zainteresowania językiem polskim czy wykonywanego zawodu. Ta część wypowiedzi nie podlega ocenie. Egzamin ustny polega na wylosowaniu zestawu, w którym znajdują się trzy zadania (należy wykonać wszystkie trzy w dowolnej kolejności):</p>
             <ol>
                 <li>opis fotografii (sytuacji na niej przedstawionej);</li>
                 <li>monolog (wypowiedź na podany temat);</li>

@@ -6,7 +6,7 @@ export const QuizB1_10 = {
     header:['Proszę wykonać zadanie zgodnie z podanym przykładem','(aspekt oraz czas przeszły).'],
     
     template:{  point:0.5},
-    text:[`Diaczegosię rozstaliśmy? Bo on...`,
+    text:[`Dlaczego się rozstaliśmy? Bo on...`,
         `· zawsze .... (zostawiać/zostawić) brudne naczynia nastole;`,
         `· co tydzień .... (wychodzić/wyjść) z kolegami do pubu i .... (wracać/wrócić) nad ranem;`,
         `· raz .... (mówić/powiedzieć) do mnie „Halinko”, chociaż mam na imię Danuta;`,

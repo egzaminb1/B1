@@ -6,7 +6,7 @@ export const QuizB1_11 = {
     header:['Proszę wykonać zadanie zgodnie z podanym przykładem','(tryb rozkazujący).'],
     
     template:{  point:0.5},
-    text:[` .... o wanych datach!`,
+    text:[` .... o ważnych datach!`,
          `Raz w tygodniu .... jej kwiaty.`,
         `.... jej w domu.`,    
         `.... dla niej czuły i dobry.`,    

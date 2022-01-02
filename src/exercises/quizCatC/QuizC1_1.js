@@ -153,7 +153,7 @@ export const QuizC1_1 = {
                 pH:'Dostawa gratis w wyznaczonej strefie',
                 pQ:'Tego napisu nie można spotkać:',
                 p:[
-                    {word:'wpizzerii' ,cls:'' ,answer:false},
+                    {word:'w pizzerii' ,cls:'' ,answer:false},
                     {word:'w taksówce' ,cls:'' ,answer:true},
                     {word:'w sklepie' ,cls:'' ,answer:false}
                 ]
