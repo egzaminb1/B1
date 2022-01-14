@@ -79,6 +79,15 @@
     z-index: 10;
     background: rgba(0,0,0,.1);
 }
+.subCatB1 .variants p{
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+    border: solid 1px red;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
 @media only screen and (max-width: 992px) {
 	.subCatB1 .questions img.small{
         max-width: 100%;

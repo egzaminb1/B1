@@ -4,6 +4,7 @@ import  SubCatA3  from "../components/quizesComponents/SubCatA3";
 import  SubCatA4  from "../components/quizesComponents/SubCatA4";
 import  SubCatB1  from "../components/quizesComponents/SubCatB1";
 import SubCatB2 from "../components/quizesComponents/SubCatB2";
+import SubCatB3 from "../components/quizesComponents/SubCatB3";
 import  SubCatC1  from "../components/quizesComponents/SubCatC1";
 import SubCatC2 from "../components/quizesComponents/SubCatC2";
 import { QuizA1_1 } from "./QuizCatA/QuizA1_1";
@@ -41,6 +42,9 @@ import { QuizB1_9 } from "./quizCatB/QuizB1_9";
 import { QuizB2_1 } from "./quizCatB/QuizB2_1";
 import { QuizB2_2 } from "./quizCatB/QuizB2_2";
 import { QuizB2_3 } from "./quizCatB/QuizB2_3";
+import { QuizB3_1 } from "./quizCatB/QuizB3_1";
+import { QuizB3_2 } from "./quizCatB/QuizB3_2";
+import { QuizB3_3 } from "./quizCatB/QuizB3_3";
 import { QuizC1_1 } from "./quizCatC/QuizC1_1";
 import { QuizC1_2 } from "./quizCatC/QuizC1_2";
 import { QuizC1_3 } from "./quizCatC/QuizC1_3";
@@ -106,6 +110,11 @@ import { QuizE6 } from "./quizCatE/QuizE6";
                 headQuiz:['Transformacje',`Tym typem transformacji jest przekształcenie zdań przy użyciu podanych wyrazów. W poleceniu znajduje się wzór, według którego powinno się przekształcać zdania, np. wszystkie transformacje należy utworzyć w formie trybu przypuszczającego. Trzeba pamiętać o dodatkowych operacjach, np. zamianie czasownika na rzeczownik, zamianie rzeczowników na odpowiednie zaimki.`],
                 component:<SubCatB2></SubCatB2>,
                 quizes:[QuizB2_1, QuizB2_2, QuizB2_3] 
+            },
+            {
+                headQuiz:['Zadania z lukami',`Takie zadanie polega na uzupełnieniu tekstu wyrazami, które znajdują się w ramce. Czasami wyrazów jest więcej niż luk w zadaniu, a niektóre wyrazy mogą być użyte więcej niż raz. Należy wybrać odpowiedni wyraz i wpisać w puste miejsce.`],
+                component:<SubCatB3></SubCatB3>,
+                quizes:[QuizB3_1, QuizB3_2, QuizB3_3] 
             }
         ]
     }

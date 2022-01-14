@@ -36,8 +36,7 @@ export const  QuizCatBReducer=(state=initialState, action)=>{
     const currentQuizFunc=(currentQuiz=state.currentQuiz, selectSubCat=state.selectSubCat)=>{
         //  debugger
         let curQuiz={...currentQuiz}
-         if(selectSubCat===0){
-            // curQuiz={...currentQuiz}
+         if(selectSubCat===0 || selectSubCat===2){
            if(!currentQuiz.arrAnswer){
             let arrAnswer=curQuiz.answer.map((item, i)=>{
                 let arrAnswer={inpWord:'', cls:'', answ:item}

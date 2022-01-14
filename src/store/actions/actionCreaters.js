@@ -37,7 +37,7 @@ export const checkExe=(time, curCatReducer)=>(
         }
         else if(curCatReducer==='QuizCatB'){
             selectSubCat=getState()[curCatReducer].selectSubCat
-            if(selectSubCat===0 )
+            if(selectSubCat===0 || selectSubCat===2 )
             dispatch(checkB1(time))
             if(selectSubCat===1)
             dispatch(checkB2(time))

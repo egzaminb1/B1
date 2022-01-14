@@ -1,8 +1,6 @@
-// import trackA3_1 from '../../assets/audio/catA3_1.mp3';
-// import trackA3_int from '../../assets/audio/catA3intrudaction.mp3';
+
 
 export const QuizB1_2 = {
-    // tracks:[trackA3_int, trackA3_1],
     header:['Proszę wykonać zadanie zgodnie z podanym przykładem.',''],
     
     template:{  point:0.5},
@@ -17,5 +15,5 @@ export const QuizB1_2 = {
             `- Basiu, bo powiem o tym .... (Tomek).`,
             `- Już dobrze! Już jestem cicho!`],
         
-    answer:['minut','kim', 'przyjaciółmy', 'mieszkanie', 'centrum', 'architectem', 'dziewczynę', 'jej', 'innym', 'mieście', 'uniwersytecie', 'moim', 'bratem', 'przystojnego', 'kolegę', 'Tomkowi']
+    answer:['minut','kim', 'przyjaciółmy', 'mieszkanie', 'centrum', 'architektem', 'dziewczynę', 'jej', 'innym', 'mieście', 'uniwersytecie', 'moim', 'bratem', 'przystojnego', 'kolegę', 'Tomkowi']
 }

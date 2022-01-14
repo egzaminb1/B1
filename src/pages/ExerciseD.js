@@ -29,6 +29,14 @@ var formatTime= function(secs) {
 
      const [state, setState]=useState(initialState())
 
+    //  const Char=(z)=>{
+    //      let charArr=[]
+    //      for(let x=0 ; x<z.length; x++){
+    //         charArr[x]=z.charCodeAt(x)
+    //      }
+    //      return charArr.join()
+    //  }
+
      const focusArea=(exer, num)=>{
         let newState=[...state]
         newState[props.selectExe]={...state[props.selectExe]}
@@ -93,6 +101,7 @@ var formatTime= function(secs) {
                 </td>
             </tr>
             <tr>
+                {/* <td>b. {props.currentQuiz[item][1][0]} {(props.currentQuiz[item][1][2])?<img alt='' src={props.currentQuiz[item][1][2]}></img>:(props.selectExe===2 && i===2)?Char(state[props.selectExe].arrWords[i][1]):null}</td> */}
                 <td>b. {props.currentQuiz[item][1][0]} {(props.currentQuiz[item][1][2])?<img alt='' src={props.currentQuiz[item][1][2]}></img>:null}</td>
                 <td>{(counWords(state[props.selectExe].arrWords[i][1])===0)?'...':<span className={state[props.selectExe].class[i][1]}>{counWords(state[props.selectExe].arrWords[i][1])}</span>}/{props.currentQuiz[item][1][1]} słów</td>
             </tr>
