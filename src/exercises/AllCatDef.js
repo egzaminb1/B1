@@ -5,6 +5,7 @@ import  SubCatA4  from "../components/quizesComponents/SubCatA4";
 import  SubCatB1  from "../components/quizesComponents/SubCatB1";
 import SubCatB2 from "../components/quizesComponents/SubCatB2";
 import SubCatB3 from "../components/quizesComponents/SubCatB3";
+import SubCatB4 from "../components/quizesComponents/SubCatB4";
 import  SubCatC1  from "../components/quizesComponents/SubCatC1";
 import SubCatC2 from "../components/quizesComponents/SubCatC2";
 import { QuizA1_1 } from "./QuizCatA/QuizA1_1";
@@ -45,6 +46,8 @@ import { QuizB2_3 } from "./quizCatB/QuizB2_3";
 import { QuizB3_1 } from "./quizCatB/QuizB3_1";
 import { QuizB3_2 } from "./quizCatB/QuizB3_2";
 import { QuizB3_3 } from "./quizCatB/QuizB3_3";
+import { QuizB4_1 } from "./quizCatB/QuizCB4_1";
+import { QuizB4_2 } from "./quizCatB/QuizCB4_2";
 import { QuizC1_1 } from "./quizCatC/QuizC1_1";
 import { QuizC1_2 } from "./quizCatC/QuizC1_2";
 import { QuizC1_3 } from "./quizCatC/QuizC1_3";
@@ -115,6 +118,12 @@ import { QuizE6 } from "./quizCatE/QuizE6";
                 headQuiz:['Zadania z lukami',`Takie zadanie polega na uzupełnieniu tekstu wyrazami, które znajdują się w ramce. Czasami wyrazów jest więcej niż luk w zadaniu, a niektóre wyrazy mogą być użyte więcej niż raz. Należy wybrać odpowiedni wyraz i wpisać w puste miejsce.`],
                 component:<SubCatB3></SubCatB3>,
                 quizes:[QuizB3_1, QuizB3_2, QuizB3_3] 
+            },
+            {
+                headQuiz:['Wybór wielokrotny',`W tym typie zadania należy wybrać poprawną formę spośród kilku podanych. Jeżeli potrafimy zidentyfikować dobrą formę, możemy od razu ją wybrać i nie czytać pozostałych propozycji. Kiedy natomiast nie jesteśmy pewni, pomocna okazać się może
+                metoda eliminacji. Należy rozpocząć od wyeliminowania formy najmniej prawdopodobnej.`],
+                component:<SubCatB4></SubCatB4>,
+                quizes:[QuizB4_1, QuizB4_2] 
             }
         ]
     }

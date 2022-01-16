@@ -85,6 +85,7 @@ export const  QuizCatCReducer=(state=initialState, action)=>{
         case AC_SAVE_SUBCAT_C:
             currentQuiz=state.cat.subCat[action.numSubCat].quizes[0]
             currentQuiz=currentQuizFunc(currentQuiz, action.numSubCat)
+            lengthQuestions=state.cat.subCat[action.numSubCat].quizes.length 
             return(
             {...state, selectSubCat:action.numSubCat, numQuestion:0, isChecked:false, hintMode:false, lengthQuestions, currentQuiz})
 
@@ -246,7 +247,7 @@ export const  QuizCatCReducer=(state=initialState, action)=>{
             newState.currentQuiz.arrAnswer=[...newArrAnswer]
             if(action.permit){
             pointForAnswer=newState.currentQuiz.template.point
-            quantity=state.currentQuiz.arrAnswer.length
+            quantity=state.currentQuiz.arrAnswer.length-1
             newState.isChecked=true
             newState.timerOfComponent=action.time
             curRightPoints=rightAnswers*pointForAnswer

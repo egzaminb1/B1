@@ -136,8 +136,7 @@ export const  QuizCatAReducer=(state=initialState, action)=>{
         case AC_SAVE_SUBCAT:
             currentQuiz=state.cat.subCat[action.numSubCat].quizes[0]
             currentQuiz=currentQuizFunc(currentQuiz, action.numSubCat)
-            //lengthQuestions=state.cat.subCat[action.numSubCat].quizes.length
-            // console.log(currentQuiz)
+            lengthQuestions=state.cat.subCat[action.numSubCat].quizes.length 
             return(
             {...state, selectSubCat:action.numSubCat, numQuestion:0, isChecked:false, hintMode:false,  lengthQuestions, currentQuiz})
         case AC_SAVE_NUMQUESTION:

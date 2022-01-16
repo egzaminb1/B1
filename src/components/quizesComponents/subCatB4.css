@@ -1,0 +1,71 @@
+
+.subCatB4 .questions{
+    background: rgba(255, 255, 255, 0.95);
+    border: solid 3px red;
+    border-radius: 10px;
+    box-shadow: 6px 6px 16px #888;
+    padding: 5px 10px;
+}
+.subCatB4 .questions{
+    background: rgba(255, 255, 255, 0.95);
+    border: solid 3px red;
+    border-radius: 10px;
+    box-shadow: 6px 6px 16px #888;
+    padding: 5px 10px;
+}
+.subCatB4 .points{
+    position: relative;
+}
+.subCatB4 .points h5{
+    position: absolute;
+    right: 20px;
+    width: 150px;
+    text-align: right;
+}
+.subCatB4 .paragraf>div{
+    line-height: 2.2em;
+    display: inline;
+}
+.subCatB4 .paragraf>*:first-child{
+    margin-left: 20px;
+}
+.subCatB4 .questions .bold{
+    font-weight: bold;
+}
+.subCatB4 .questions .green{
+    color:green;
+}
+.subCatB4 .questions .red{
+    color:red;
+}
+.subCatB4 .paragraf>div span:hover{
+    box-shadow: 2px 2px 5px #888;
+    cursor: pointer;
+}
+.subCatB4 .paragraf>div span{
+    margin: 0 3px;
+}
+.subCatB4 .paragraf>div i{
+    background: rgba(228,213,14,.2);
+    padding: 0 3px;
+    border-radius: 5px;
+}
+
+.subCatB4 .questions .mask{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: rgba(0,0,0,.1);
+}
+
+
+/* @media only screen and (max-width: 992px) {
+	.subCatB4 .questions img.small{
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+} */
