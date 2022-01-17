@@ -1,0 +1,99 @@
+
+.subCatC3 .questions{
+    background: rgba(255, 255, 255, 0.95);
+    border: solid 3px red;
+    border-radius: 10px;
+    box-shadow: 6px 6px 16px #888;
+    padding: 5px 10px;
+}
+.subCatC3 .questions{
+    background: rgba(255, 255, 255, 0.95);
+    border: solid 3px red;
+    border-radius: 10px;
+    box-shadow: 6px 6px 16px #888;
+    padding: 5px 10px;
+}
+.subCatC3 .points{
+    position: relative;
+}
+.subCatC3 .points h5{
+    position: absolute;
+    right: 20px;
+    width: 150px;
+    text-align: right;
+}
+/* .subCatC3 .paragraf>div{
+    line-height: 2.2em;
+    display: inline;
+}
+.subCatC3 .paragraf>*:first-child{
+    margin-left: 20px;
+} */
+.subCatC3 .questions .bold{
+    font-weight: bold;
+}
+.subCatC3 .questions .green{
+    color:green;
+}
+.subCatC3 .questions .red{
+    color:red;
+}
+/* .subCatC3 .paragraf>div span:hover{
+    box-shadow: 2px 2px 5px #888;
+    cursor: pointer;
+}
+.subCatC3 .paragraf>div span{
+    margin: 0 3px;
+}
+.subCatC3 .paragraf>div i{
+    background: rgba(228,213,14,.2);
+    padding: 0 3px;
+    border-radius: 5px;
+} */
+
+.subCatC3 .questions .mask{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: rgba(0,0,0,.1);
+}
+.subCatC3 table{ 
+    /* margin: auto; */
+    width: 100%;
+    margin-bottom: 20px;
+}
+.subCatC3 table td{ 
+    border: solid 1px red;
+}
+.subCatC3 .tableMain td{ 
+    padding: 5px;
+}
+.subCatC3 .tableMain tr:first-child{ 
+    font-weight: bold;
+}
+.subCatC3 .tableAnsw td{ 
+    text-align: center;
+}
+.subCatC3 .tableAnsw tr td:first-child{ 
+    font-weight: bold;
+}
+.subCatC3 .tableAnsw td input{ 
+    width: 16px;
+    padding: 2px;
+    border: none;
+}
+.subCatC3 .tableAnsw td input:hover{ 
+    box-shadow: 2px 2px 5px #888;
+    cursor: pointer;
+}
+
+/* @media only screen and (max-width: 992px) {
+	.subCatC3 .questions img.small{
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+} */

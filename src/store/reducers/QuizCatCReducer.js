@@ -1,6 +1,6 @@
 import { catC} from "../../exercises/AllCatDef"
 import { QuizC1_1 } from "../../exercises/quizCatC/QuizC1_1"
-import { AC_BOLD_CLASS_C1, AC_BOLD_CLASS_C2, AC_CHECK_C1, AC_CHECK_C2, AC_CLEAR_STATE_C, AC_HINT_MODE_C, AC_INP_ANSW_C1, AC_NEXT_C, AC_PREV_C, AC_SAVE_NUMQUESTION_C, AC_SAVE_SUBCAT_C } from "../actions/actionTypes"
+import { AC_BOLD_CLASS_C1, AC_BOLD_CLASS_C2, AC_CHECK_C1, AC_CHECK_C2, AC_CHECK_C3, AC_CLEAR_STATE_C, AC_HINT_MODE_C, AC_INP_ANSW_C1, AC_INP_ANSW_C3, AC_NEXT_C, AC_PREV_C, AC_SAVE_NUMQUESTION_C, AC_SAVE_SUBCAT_C } from "../actions/actionTypes"
 
 const initialState={
     cat:catC,
@@ -76,6 +76,23 @@ export const  QuizCatCReducer=(state=initialState, action)=>{
                 })
                 // console.log(arrGroupWords)
                 curQuiz.arrAnswer=arrGroupWords
+            }
+            return curQuiz
+        }else if(selectSubCat===2){
+            curQuiz={...currentQuiz}
+            if(!curQuiz.arrAnswer){
+                curQuiz.answer=[...currentQuiz.answer]
+                let arrAnswer=curQuiz.answer.map((item,i)=>{
+                    // return ''
+                 return {inpWord:'', cls:'', answ:item}
+                })
+                curQuiz.arrAnswer=arrAnswer
+            }else {
+                curQuiz.arrAnswer=[...currentQuiz.arrAnswer]
+                curQuiz.arrAnswer.map((item, i)=>{
+                    curQuiz.arrAnswer[i]={...item}
+                    return(i)
+                })
             }
             return curQuiz
         }
@@ -257,6 +274,36 @@ export const  QuizCatCReducer=(state=initialState, action)=>{
             newState.arrStatistic.push(statistic)
             }
             return(newState)
+
+        case AC_INP_ANSW_C3:
+            newState.currentQuiz=currentQuizFunc()
+            newState.currentQuiz.arrAnswer[action.countInput].inpWord=action.value
+            return(
+            {...newState})
+
+        case AC_CHECK_C3:
+            newState.currentQuiz=currentQuizFunc()
+                for(let x of newState.currentQuiz.arrAnswer){
+                    let b1_answ=x.answ.toLowerCase().split('')
+                    .filter(function(n) { return n !== ' ' && n !== ''}).join('')
+                    let b1_inpWord=x.inpWord.toLowerCase().split('')
+                    .filter(function(n) { return n !== ' ' && n !== '' }).join('')
+                    if(b1_answ===b1_inpWord){
+                        x.cls='green'
+                        rightAnswers++
+                    }else x.cls='red'
+                }
+                pointForAnswer=newState.currentQuiz.template.point
+                quantity=state.currentQuiz.arrAnswer.length-1
+                newState.isChecked=true
+                newState.timerOfComponent=action.time
+                curRightPoints=rightAnswers*pointForAnswer
+                newState.curRightPoints=curRightPoints
+                newState.arrStatistic=[...state.arrStatistic]
+                statistic={catHeader, headQuiz, selectSubCat:state.selectSubCat, numQuestion:state.numQuestion, quantity, points:pointForAnswer, curRightPoints, sumPoints:quantity*pointForAnswer, timerOfComponent:action.time }
+                newState.arrStatistic.push(statistic)
+                return(newState)
+
         case AC_CLEAR_STATE_C:
             // currentQuiz=state.cat.subCat[0].quizes[0]
             // currentQuiz=currentQuizFunc()

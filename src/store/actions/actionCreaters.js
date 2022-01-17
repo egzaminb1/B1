@@ -1,4 +1,4 @@
-import { AC_BOLD_CLASS, AC_BOLD_CLASS_A4, AC_BOLD_CLASS_B4, AC_BOLD_CLASS_C1, AC_BOLD_CLASS_C2, AC_CHECK_A3, AC_CHECK_A4, AC_CHECK_B1, AC_CHECK_B2, AC_CHECK_B4, AC_CHECK_C1, AC_CHECK_C2, AC_CHECK_EXE,  AC_CLEAR_STATE_A, AC_CLEAR_STATE_B, AC_CLEAR_STATE_C, AC_CLEAR_STATISTIC, AC_COPY_STATISTIC, AC_HINT_MODE, AC_HINT_MODE_B, AC_HINT_MODE_C, AC_INP_ANSW, AC_INP_ANSW_B1, AC_INP_ANSW_C1, AC_NEXT, AC_NEXT_B, AC_NEXT_C, AC_NEXT_D, AC_NEXT_E, AC_PREV, AC_PREV_B, AC_PREV_C, AC_PREV_D, AC_PREV_E, AC_SAVE_NUMQUESTION, AC_SAVE_NUMQUESTION_B, AC_SAVE_NUMQUESTION_C, AC_SAVE_SELECT_D, AC_SAVE_SELECT_E, AC_SAVE_SUBCAT, AC_SAVE_SUBCAT_B, AC_SAVE_SUBCAT_C } from "./actionTypes";
+import { AC_BOLD_CLASS, AC_BOLD_CLASS_A4, AC_BOLD_CLASS_B4, AC_BOLD_CLASS_C1, AC_BOLD_CLASS_C2, AC_CHECK_A3, AC_CHECK_A4, AC_CHECK_B1, AC_CHECK_B2, AC_CHECK_B4, AC_CHECK_C1, AC_CHECK_C2, AC_CHECK_C3, AC_CHECK_EXE,  AC_CLEAR_STATE_A, AC_CLEAR_STATE_B, AC_CLEAR_STATE_C, AC_CLEAR_STATISTIC, AC_COPY_STATISTIC, AC_HINT_MODE, AC_HINT_MODE_B, AC_HINT_MODE_C, AC_INP_ANSW, AC_INP_ANSW_B1, AC_INP_ANSW_C1, AC_INP_ANSW_C3, AC_NEXT, AC_NEXT_B, AC_NEXT_C, AC_NEXT_D, AC_NEXT_E, AC_PREV, AC_PREV_B, AC_PREV_C, AC_PREV_D, AC_PREV_E, AC_SAVE_NUMQUESTION, AC_SAVE_NUMQUESTION_B, AC_SAVE_NUMQUESTION_C, AC_SAVE_SELECT_D, AC_SAVE_SELECT_E, AC_SAVE_SUBCAT, AC_SAVE_SUBCAT_B, AC_SAVE_SUBCAT_C } from "./actionTypes";
 
 export const hintModeHandler=(curCatReducer)=>(
     (dispatch, getState)=>{
@@ -51,6 +51,8 @@ export const checkExe=(time, curCatReducer)=>(
             dispatch(checkC1(time))
             if(selectSubCat===1)
             dispatch(checkC2(time))
+            if(selectSubCat===2)
+            dispatch(checkC3(time))
         }
     }
 )
@@ -211,11 +213,17 @@ export const clearStateC=()=>(
 export const inpAnswC1=(value, countInput)=>(
     {type:AC_INP_ANSW_C1, value, countInput}
 )
+export const inpAnswC3=(value, countInput)=>(
+    {type:AC_INP_ANSW_C3, value, countInput}
+)
 export const checkC1=(time, permit=true)=>(
     {type:AC_CHECK_C1, time, permit}
 )
 export const checkC2=(time, permit=true)=>(
     {type:AC_CHECK_C2, time, permit}
+)
+export const checkC3=(time, permit=true)=>(
+    {type:AC_CHECK_C3, time, permit}
 )
 export const hintModeC=()=>(
     {type:AC_HINT_MODE_C}

@@ -5,7 +5,7 @@ import { boldClassC2 } from "../../store/actions/actionCreaters";
 import  Points  from "../points/Points";
 import "./subCatC2.css";
 
- const SubCatB1 =(props)=>{
+ const SubCatC2 =(props)=>{
     let count=0
     let arrCount=[]
 
@@ -117,4 +117,4 @@ const mapDispatchToProps=(dispatch)=>(
     }
 )
 
-export default connect(mapStateToProps,mapDispatchToProps)(SubCatB1)
+export default connect(mapStateToProps,mapDispatchToProps)(SubCatC2)
