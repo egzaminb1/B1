@@ -31,7 +31,8 @@ import "./subCatB1.css";
             let arr
             // let sizeInp=11
             let sizeInp=props.quiz.arrAnswer[arrCount[num][i]].answ.length
-            if(i===0 && num===0){
+            // if(i===0 && num===0){
+            if(arrCount[num][i]===0){
                 arr=(<div key={i}>{item}
                 <input  className='inp' type='text' size={sizeInp} value={props.quiz.arrAnswer[arrCount[num][i]].answ} readOnly={true} ></input>
                 </div>)

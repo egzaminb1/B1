@@ -9,6 +9,10 @@ import SubCatB4 from "../components/quizesComponents/SubCatB4";
 import  SubCatC1  from "../components/quizesComponents/SubCatC1";
 import SubCatC2 from "../components/quizesComponents/SubCatC2";
 import SubCatC3 from "../components/quizesComponents/SubCatC3";
+import SubCatC4 from "../components/quizesComponents/SubCatC4";
+import SubCatC5 from "../components/quizesComponents/SubCatC5";
+import SubCatC6 from "../components/quizesComponents/SubCatC6";
+import SubCatC7 from "../components/quizesComponents/SubCatC7";
 import { QuizA1_1 } from "./QuizCatA/QuizA1_1";
 import { QuizA1_2 } from "./QuizCatA/QuizA1_2";
 import { QuizA1_3 } from "./QuizCatA/QuizA1_3";
@@ -57,6 +61,21 @@ import { QuizC2_1 } from "./quizCatC/QuizC2_1";
 import { QuizC2_2 } from "./quizCatC/QuizC2_2";
 import { QuizC2_3 } from "./quizCatC/QuizC2_3";
 import { QuizC3_1 } from "./quizCatC/QuizC3_1";
+import { QuizC3_2 } from "./quizCatC/QuizC3_2";
+import { QuizC3_3 } from "./quizCatC/QuizC3_3";
+import { QuizC4_1 } from "./quizCatC/QuizC4_1";
+import { QuizC4_2 } from "./quizCatC/QuizC4_2";
+import { QuizC4_3 } from "./quizCatC/QuizC4_3";
+import { QuizC5_1 } from "./quizCatC/QuizC5_1";
+import { QuizC5_2 } from "./quizCatC/QuizC5_2";
+import { QuizC6_1 } from "./quizCatC/QuizC6_1";
+import { QuizC6_2 } from "./quizCatC/QuizC6_2";
+import { QuizC6_3 } from "./quizCatC/QuizC6_3";
+import { QuizC7_1 } from "./quizCatC/QuizC7_1";
+import { QuizC7_2 } from "./quizCatC/QuizC7_2";
+import { QuizC7_3 } from "./quizCatC/QuizC7_3";
+import { QuizC7_4 } from "./quizCatC/QuizC7_4";
+import { QuizC7_5 } from "./quizCatC/QuizC7_5";
 import { QuizD1 } from "./quizCatD/QuizD1";
 import { QuizD2 } from "./quizCatD/QuizD2";
 import { QuizD3 } from "./quizCatD/QuizD3";
@@ -146,7 +165,27 @@ import { QuizE6 } from "./quizCatE/QuizE6";
             {
                 headQuiz:['Zadania z jednostkami na dobieranie informacji',``],
                 component:<SubCatC3></SubCatC3>,
-                quizes:[QuizC3_1, QuizC3_1] 
+                quizes:[QuizC3_1, QuizC3_2, QuizC3_3] 
+            },
+            {
+                headQuiz:['Zadania z jednostkami na dobieranie informacji',``],
+                component:<SubCatC4></SubCatC4>,
+                quizes:[QuizC4_1, QuizC4_2, QuizC4_3] 
+            },
+            {
+                headQuiz:['Zadania z lukami',`Uzupełnianie luk w tekście usuniętymi z niego wyrazami`],
+                component:<SubCatC5></SubCatC5>,
+                quizes:[QuizC5_1, QuizC5_2] 
+            },
+            {
+                headQuiz:['Zadania z lukami',`Uzupełnianie luk w tekście usuniętymi z niego zdaniami`],
+                component:<SubCatC6></SubCatC6>,
+                quizes:[QuizC6_1, QuizC6_2, QuizC6_3] 
+            },
+            {
+                headQuiz:['Zadania z jednostkami prawda/fałsz (P/F)',``],
+                component:<SubCatC7></SubCatC7>,
+                quizes:[QuizC7_1, QuizC7_2, QuizC7_3, QuizC7_4, QuizC7_5] 
             }
         ]
     }

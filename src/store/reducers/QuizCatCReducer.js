@@ -1,6 +1,6 @@
 import { catC} from "../../exercises/AllCatDef"
 import { QuizC1_1 } from "../../exercises/quizCatC/QuizC1_1"
-import { AC_BOLD_CLASS_C1, AC_BOLD_CLASS_C2, AC_CHECK_C1, AC_CHECK_C2, AC_CHECK_C3, AC_CLEAR_STATE_C, AC_HINT_MODE_C, AC_INP_ANSW_C1, AC_INP_ANSW_C3, AC_NEXT_C, AC_PREV_C, AC_SAVE_NUMQUESTION_C, AC_SAVE_SUBCAT_C } from "../actions/actionTypes"
+import { AC_BOLD_CLASS_C1, AC_BOLD_CLASS_C2, AC_BOLD_CLASS_C7, AC_CHECK_C1, AC_CHECK_C2, AC_CHECK_C3, AC_CHECK_C5, AC_CHECK_C7, AC_CLEAR_STATE_C, AC_HINT_MODE_C, AC_INP_ANSW_C3, AC_NEXT_C, AC_PREV_C, AC_SAVE_NUMQUESTION_C, AC_SAVE_SUBCAT_C } from "../actions/actionTypes"
 
 const initialState={
     cat:catC,
@@ -35,9 +35,9 @@ export const  QuizCatCReducer=(state=initialState, action)=>{
 
     const currentQuizFunc=(currentQuiz=state.currentQuiz, selectSubCat=state.selectSubCat)=>{
         //  debugger
-        let curQuiz
+        let curQuiz={...currentQuiz}
         if(selectSubCat===0){
-            curQuiz={...currentQuiz}
+            // curQuiz={...currentQuiz}
             curQuiz.card=[...currentQuiz.card]
             curQuiz.card.map((nCard,i)=>{
                 curQuiz.card[i]={...nCard}
@@ -50,7 +50,7 @@ export const  QuizCatCReducer=(state=initialState, action)=>{
                 })
             return curQuiz
         }else if(selectSubCat===1){
-            curQuiz={...currentQuiz}
+            // curQuiz={...currentQuiz}
             if(!curQuiz.arrAnswer){
                 curQuiz.answer=[...currentQuiz.answer]
                 let arrAnswer=curQuiz.answer.map((item,i)=>{
@@ -78,10 +78,10 @@ export const  QuizCatCReducer=(state=initialState, action)=>{
                 curQuiz.arrAnswer=arrGroupWords
             }
             return curQuiz
-        }else if(selectSubCat===2){
-            curQuiz={...currentQuiz}
+        }else if(selectSubCat===2 || selectSubCat===3 || selectSubCat===4 || selectSubCat===5){
+            // curQuiz={...currentQuiz}
             if(!curQuiz.arrAnswer){
-                curQuiz.answer=[...currentQuiz.answer]
+                // curQuiz.answer=[...currentQuiz.answer]
                 let arrAnswer=curQuiz.answer.map((item,i)=>{
                     // return ''
                  return {inpWord:'', cls:'', answ:item}
@@ -94,6 +94,22 @@ export const  QuizCatCReducer=(state=initialState, action)=>{
                     return(i)
                 })
             }
+            return curQuiz
+        }else if(selectSubCat===6){
+            curQuiz={...currentQuiz}
+           if(!currentQuiz.arrRows){
+            let arrRows=curQuiz.rows.map((item, i)=>{
+                let arrRows={clause:item[0], clsP:'', clsF:'', answ:item[1]}
+                 return(arrRows)
+             })
+             curQuiz.arrRows=arrRows
+           }else{
+            curQuiz.arrRows=[...currentQuiz.arrRows]
+            curQuiz.arrRows.map((item, i)=>{
+                curQuiz.arrRows[i]={...item}
+                return(i)
+            })
+           }
             return curQuiz
         }
     }
@@ -146,34 +162,6 @@ export const  QuizCatCReducer=(state=initialState, action)=>{
              let hint=(state.hintMode===true)?false:true
             return(
             {...state, hintMode:hint})
-        
-        // case AC_INP_ANSW_C1:
-        //     newState.currentQuiz=currentQuizFunc()
-        //     newState.currentQuiz.arrAnswer[action.countInput].inpWord=action.value
-        //     // newState.currentQuiz.arrAnswer[action.countInput].inpWord=action.value.split(' ').join('')
-        //     //  debugger
-        //     return(
-        //     {...newState})
-        
-        // case AC_CHECK_C1:
-        //     newState.currentQuiz=currentQuizFunc()
-        //         let x
-        //         for(x of newState.currentQuiz.arrAnswer){
-        //             if(x.answ.toLowerCase()===x.inpWord.toLowerCase()){
-        //                 x.cls='bGreen'
-        //                 rightAnswers++
-        //             }else x.cls='red'
-        //         }
-        //         pointForAnswer=newState.currentQuiz.template.point
-        //         quantity=state.currentQuiz.arrAnswer.length-1
-        //         newState.isChecked=true
-        //         newState.timerOfComponent=action.time
-        //         curRightPoints=rightAnswers*pointForAnswer
-        //         newState.curRightPoints=curRightPoints
-        //         newState.arrStatistic=[...state.arrStatistic]
-        //         statistic={catHeader, headQuiz, selectSubCat:state.selectSubCat, numQuestion:state.numQuestion, quantity, points:pointForAnswer, curRightPoints, sumPoints:quantity*pointForAnswer, timerOfComponent:action.time }
-        //         newState.arrStatistic.push(statistic)
-        //         return(newState)
 
         case AC_BOLD_CLASS_C1:
                 if(!state.isChecked){
@@ -219,9 +207,9 @@ export const  QuizCatCReducer=(state=initialState, action)=>{
                         }
                     if(!str.answer && str.cls.includes('bold'))
                     newStr.cls=newStr.cls+' red'
-                    return
+                    return n
                 })
-                return
+                return i
             })
             if(action.permit){
             pointForAnswer=newState.currentQuiz.template.point
@@ -303,6 +291,85 @@ export const  QuizCatCReducer=(state=initialState, action)=>{
                 statistic={catHeader, headQuiz, selectSubCat:state.selectSubCat, numQuestion:state.numQuestion, quantity, points:pointForAnswer, curRightPoints, sumPoints:quantity*pointForAnswer, timerOfComponent:action.time }
                 newState.arrStatistic.push(statistic)
                 return(newState)
+
+        case AC_CHECK_C5:
+            newState.currentQuiz=currentQuizFunc()
+                // let x
+                for(let x of newState.currentQuiz.arrAnswer){
+                    let b1_answ=x.answ.toLowerCase().split('')
+                    .filter(function(n) { return n !== ' ' && n !== '' && n !== '"' && n !== `'` && n !== `,` && n !== `;` && n !== `:`  && n !== `.`}).join('')
+                    let b1_inpWord=x.inpWord.toLowerCase().split('')
+                    .filter(function(n) { return n !== ' ' && n !== '' && n !== '"' && n !== `'` && n !== `,` && n !== `;` && n !== `:`  && n !== `.`}).join('')
+
+                    // if(x.answ.toLowerCase()===x.inpWord.toLowerCase()){
+                    if(b1_answ===b1_inpWord){
+                        x.cls='bGreen'
+                        rightAnswers++
+                    }else x.cls='red'
+                }
+                pointForAnswer=newState.currentQuiz.template.point
+                quantity=state.currentQuiz.arrAnswer.length-1
+                newState.isChecked=true
+                newState.timerOfComponent=action.time
+                curRightPoints=rightAnswers*pointForAnswer
+                newState.curRightPoints=curRightPoints
+                newState.arrStatistic=[...state.arrStatistic]
+                statistic={catHeader, headQuiz, selectSubCat:state.selectSubCat, numQuestion:state.numQuestion, quantity, points:pointForAnswer, curRightPoints, sumPoints:quantity*pointForAnswer, timerOfComponent:action.time }
+                newState.arrStatistic.push(statistic)
+                return(newState)
+        case AC_BOLD_CLASS_C7:
+            newState.currentQuiz=currentQuizFunc()
+            newState.currentQuiz.arrRows[action.keyRow]['clsP']=''
+            newState.currentQuiz.arrRows[action.keyRow]['clsF']=''
+            newState.currentQuiz.arrRows[action.keyRow][action.keyCell]='bold'
+            return(newState)
+        case AC_CHECK_C7:
+            newState.currentQuiz=currentQuizFunc()
+            let rowsC7=[]
+            let oldRow=state.currentQuiz.arrRows
+            rowsC7=newState.currentQuiz.arrRows.map((rowC7,i)=>{
+                if(i===0)return rowC7
+                let answ=rowC7.answ
+            if(oldRow[i].clsP.includes('bold')){
+                if(answ){
+                rightAnswers++
+                rowC7.clsP=rowC7.clsP+' bGreen'
+                }else rowC7.clsP=rowC7.clsP+' red'
+            }
+            
+            if(oldRow[i].clsF.includes('bold')){
+                if(!answ){
+                    rightAnswers++
+                    rowC7.clsF=rowC7.clsF+' bGreen'
+                }else rowC7.clsF=rowC7.clsF+' red'
+            }
+            
+                if(answ && !oldRow[i].clsP.includes('bold')){
+                    if(state.hintMode)
+                    rowC7.clsP=rowC7.clsP+' green'
+                    else rowC7.clsP=''
+                }
+                if(!answ && !oldRow[i].clsF.includes('bold')){
+                    if(state.hintMode)
+                    rowC7.clsF=rowC7.clsF+' green'
+                    else rowC7.clsF=''
+                }
+                    return rowC7
+            })
+            newState.currentQuiz.arrRows=rowsC7
+            if(action.permit){
+                pointForAnswer=newState.currentQuiz.template.point
+                quantity=state.currentQuiz.rows.length-1
+                newState.isChecked=true
+                newState.timerOfComponent=action.time
+                curRightPoints=rightAnswers*pointForAnswer
+                newState.curRightPoints=curRightPoints
+                newState.arrStatistic=[...state.arrStatistic]
+                statistic={catHeader, headQuiz, selectSubCat:state.selectSubCat, numQuestion:state.numQuestion, quantity, points:pointForAnswer, curRightPoints, sumPoints:quantity*pointForAnswer, timerOfComponent:action.time }
+                newState.arrStatistic.push(statistic)
+                }
+                
+            return(newState)
 
         case AC_CLEAR_STATE_C:
             // currentQuiz=state.cat.subCat[0].quizes[0]

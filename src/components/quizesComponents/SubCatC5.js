@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
-import {inpAnswB1 } from "../../store/actions/actionCreaters";
+import {inpAnswC3} from "../../store/actions/actionCreaters";
 import  Points  from "../points/Points";
-import "./subCatB1.css";
+import "./subCatC5.css";
 
- const SubCatB3 =(props)=>{
+ const SubCatC5 =(props)=>{
     let count=0
     let arrCount=[]
 
@@ -62,7 +62,7 @@ import "./subCatB1.css";
     }
 
     return(
-    <div className='subCatB1'>
+    <div className='subCatC5'>
         
         <div className='headSubCat'>
             <h5>{props.header1}</h5>
@@ -76,7 +76,7 @@ import "./subCatB1.css";
                         isChecked={props.isChecked}
                         curRightPoints={props.curRightPoints}
                         points={props.points}
-                        curCatReducer={'QuizCatB'}
+                        curCatReducer={'QuizCatC'}
                 ></Points>
                 <hr></hr>
             </div>
@@ -92,23 +92,23 @@ import "./subCatB1.css";
 const mapStateToProps=(state)=>{
 return(
     {
-    header1:state.QuizCatB.currentQuiz.header[0],
-    header2:state.QuizCatB.currentQuiz.header[1],
-    quiz:state.QuizCatB.currentQuiz,
-    isChecked:state.QuizCatB.isChecked,
-    hintMode:state.QuizCatB.hintMode,
+    header1:state.QuizCatC.currentQuiz.header[0],
+    header2:state.QuizCatC.currentQuiz.header[1],
+    quiz:state.QuizCatC.currentQuiz,
+    isChecked:state.QuizCatC.isChecked,
+    hintMode:state.QuizCatC.hintMode,
 
-    quantity:state.QuizCatB.currentQuiz.arrAnswer.length-1,
-    timerOfComponent:state.QuizCatB.timerOfComponent,
-    curRightPoints:state.QuizCatB.curRightPoints,
-    points:state.QuizCatB.currentQuiz.template.point,
-    variants:state.QuizCatB.currentQuiz.variants
+    quantity:state.QuizCatC.currentQuiz.arrAnswer.length-1,
+    timerOfComponent:state.QuizCatC.timerOfComponent,
+    curRightPoints:state.QuizCatC.curRightPoints,
+    points:state.QuizCatC.currentQuiz.template.point,
+    variants:state.QuizCatC.currentQuiz.variants
     }
 )}
 const mapDispatchToProps=(dispatch)=>(
     {
-    inpAnsw:(value, countInput)=>dispatch(inpAnswB1(value, countInput))
+    inpAnsw:(value, countInput)=>dispatch(inpAnswC3(value, countInput))
     }
 )
 
-export default connect(mapStateToProps,mapDispatchToProps)(SubCatB3)
+export default connect(mapStateToProps,mapDispatchToProps)(SubCatC5)

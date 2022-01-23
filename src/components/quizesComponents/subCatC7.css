@@ -1,0 +1,94 @@
+
+
+.subCatC7 .questions {
+    background: rgba(255, 255, 255, 0.95);
+    border: solid 3px red;
+    border-radius: 10px;
+    box-shadow: 6px 6px 16px #888;
+    padding: 5px 10px;
+    font-size: 18px;
+    position: relative;
+}
+.subCatC7 .questions p{
+    margin-bottom: 0;
+}
+.subCatC7 .questions p::before{
+    content: '';
+    margin-left: 40px;
+}
+.subCatC7 .points{
+    position: relative;
+    /* width: 100%; */
+}
+.subCatC7 .points h5{
+    position: absolute;
+    right: 0px;
+    width: 130px;
+    text-align: left;
+}
+.subCatC7 table{
+    margin-left: auto;
+    margin-right: auto;
+}
+.subCatC7 table td{
+    padding: 10px 15px;
+}
+.subCatC7 thead{
+    background-color: rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto Slab', serif;
+}
+.subCatC7 tbody tr:nth-child(even){
+    background-color: rgba(255, 0, 0, 0.1);
+}
+.subCatC7 .questions .prawda{
+    cursor: pointer;
+    transition: all .2s linear;
+    width: fit-content;
+    /* font-family: 'Roboto Slab', serif; */
+    font-weight:600;
+    /* border-radius: 5px; */
+    /* padding: 0 15px; */
+}
+.subCatC7 .questions .prawda:hover{
+    /* box-shadow: 2px 2px 5px #888; */
+    text-shadow: 2px 2px 4px grey;
+}
+.subCatC7 .questions .falsz{
+    cursor: pointer;
+    transition: all .2s linear;
+    width: fit-content;
+    /* border-radius: 5px; */
+    /* padding: 0 15px; */
+    /* font-family: 'Roboto Slab', serif;
+    font-weight:300; */
+    font-weight:600;
+}
+.subCatC7 .questions .falsz:hover{
+    /* box-shadow: 2px 2px 5px #888; */
+    text-shadow: 2px 2px 4px grey;
+}
+.subCatC7 .questions .bold{
+    font-weight: 900;
+    font-family: 'Roboto Slab', serif;
+    text-shadow: 2px 2px 4px grey;
+}
+.subCatC7 .questions .green{
+    color:green;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    /* text-shadow: 0px 0px 6px green; */
+}
+.subCatC7 .questions .bGreen{
+    color:green;
+}
+.subCatC7 .questions .red{
+    color:red;
+}
+.subCatC7 .questions .mask{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: rgba(0,0,0,.1);
+}

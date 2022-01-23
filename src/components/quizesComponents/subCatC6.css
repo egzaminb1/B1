@@ -1,0 +1,102 @@
+
+.subCatC6 .questions{
+    background: rgba(255, 255, 255, 0.95);
+    border: solid 3px red;
+    border-radius: 10px;
+    box-shadow: 6px 6px 16px #888;
+    padding: 5px 10px;
+}
+.subCatC6 .points{
+    position: relative;
+}
+.subCatC6 .points h5{
+    position: absolute;
+    right: 20px;
+    width: 150px;
+    text-align: right;
+}
+.subCatC6 .paragraf>div{
+    /* line-height: 2.2em; */
+    display: inline;
+}
+.subCatC6 .paragraf>*:first-child{
+    margin-left: 20px;
+}
+.subCatC6 .paragraf>div p{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+.subCatC6 .inp{
+    font-weight: bold;
+}
+.subCatC6 input{
+    border: none;
+    background: rgba(228,213,14,.2);
+    text-align: center;
+    height: 1.5em;
+    border-radius: 5px;
+    /* max-width: 100%; */
+    width: 16px;
+    margin:0 5px;
+}
+.subCatC6 .paragraf .bGreen{
+    color:green;
+    font-weight: bold;
+}
+.subCatC6 .paragraf i{
+    color:green;
+    position:absolute;
+    right: 0;
+    top: -17px;
+}
+
+.subCatC6 .paragraf .red{
+    color:red;
+    font-weight: bold;
+}
+.subCatC6 .paragraf .fontHint{
+    color:green;
+    font-weight: normal;
+    font-style: italic;
+}
+.subCatC6 .questions{
+    position: relative;
+}
+.subCatC6 .questions img{
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+.subCatC6 .questions img.small{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 15px;
+}
+.subCatC6 .questions .mask{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: rgba(0,0,0,.1);
+}
+.subCatC6 .variants{
+    margin: 30px 0 20px;
+}
+.subCatC6 .variants p{
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 992px) {
+	.subCatC6 .questions img.small{
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+}

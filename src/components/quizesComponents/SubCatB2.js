@@ -8,12 +8,12 @@ import "./subCatB2.css";
  const SubCatB2 =(props)=>{
 
     const answP=(i)=>{
-        let rO=(props.isChecked )?true:false
-        let sizeInp=15
+        //  let rO=(i===0)?true:false
+        // let sizeInp=15
         let val=(props.isChecked && props.quiz.arrAnswer[i].cls==='bGreen')?props.quiz.arrAnswer[i].answ:props.quiz.arrAnswer[i].inpWord
          val=(i===0)?props.quiz.arrAnswer[i].answ:val
          let hint=(props.hintMode && props.isChecked && props.quiz.arrAnswer[i].cls!=='bGreen')?'inpShow':'inpHide'
-        let inp=(i===0)?<TextareaAutosize aria-label="empty textarea" className='inp'  style={{resize: 'none', width: '100%'}}  value={val}></TextareaAutosize>:
+        let inp=(i===0)?<TextareaAutosize aria-label="empty textarea" className='inp'  style={{resize: 'none', width: '100%'}}  value={val} readOnly={true}></TextareaAutosize>:
         <Fragment>
             <p className={hint} >{props.quiz.arrAnswer[i].answ}</p>
             <TextareaAutosize aria-label="empty textarea"  className={props.quiz.arrAnswer[i].cls} placeholder='.................' style={{resize: 'none', width: '100%'}}  value={val} onChange={(e)=>(props.inpAnsw(e.target.value, i))}></TextareaAutosize>

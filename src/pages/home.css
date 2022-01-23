@@ -211,3 +211,22 @@ body{
 	
 
 } */
+.baseScreen{
+    position: relative;
+}
+.dispCat div{
+    padding:0 20px;
+    display:flex;
+    justify-content:space-between;
+    background: rgba(237, 28, 36, .9);
+    margin-bottom: 2px;
+    color: white;
+}
+.dispCat h4{
+    margin: 10px 0;
+}
+@media only screen and (max-width: 640px){
+    .dispCat h4{
+        font-size: 4vw;
+    }
+}

@@ -1,0 +1,72 @@
+
+.subCatC4 .questions{
+    background: rgba(255, 255, 255, 0.95);
+    border: solid 3px red;
+    border-radius: 10px;
+    box-shadow: 6px 6px 16px #888;
+    padding: 5px 10px;
+}
+.subCatC4 .questions{
+    background: rgba(255, 255, 255, 0.95);
+    border: solid 3px red;
+    border-radius: 10px;
+    box-shadow: 6px 6px 16px #888;
+    padding: 5px 10px;
+}
+.subCatC4 .points{
+    position: relative;
+}
+.subCatC4 .points h5{
+    position: absolute;
+    right: 20px;
+    width: 150px;
+    text-align: right;
+}
+.subCatC4 .questions .bold{
+    font-weight: bold;
+}
+.subCatC4 .questions .green{
+    color:green;
+}
+.subCatC4 .questions .red{
+    color:red;
+}
+.subCatC4 .questions .mask{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: rgba(0,0,0,.1);
+}
+.subCatC4 .questions p{
+    margin-bottom: 5px;
+}
+.subCatC4 .questions .firstConformity p:first-child{
+    font-weight: bold;
+}
+.subCatC4 .questions .firstConformity{
+    margin-bottom: 20px;
+}
+.subCatC4 .questions .secondConformity p:first-child{
+    font-weight: bold;
+}
+.subCatC4 .questions .secondConformity p:first-child+p{
+    font-weight: bold;
+}
+.subCatC4 .questions .secondConformity input{
+    width: 36px;
+    padding: 0 10px;
+    font-weight: bold;
+}
+.subCatC4 .questions .C4_introdaction{
+    margin: 5px 5px 20px;
+}
+/* @media only screen and (max-width: 992px) {
+	.subCatC4 .questions img.small{
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+} */

@@ -105,11 +105,11 @@
 } 
 
 
-@media only screen and (max-width: 640px){
+/* @media only screen and (max-width: 640px){
     .dispCat h4{
         font-size: 5vw;
     }
-}
+} */
 @media only screen and (min-width: 530px){
     .catD .headD .pointD table td:first-child{
         width: 400px;
