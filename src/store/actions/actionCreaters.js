@@ -1,4 +1,4 @@
-import { AC_BOLD_CLASS, AC_BOLD_CLASS_A4, AC_BOLD_CLASS_B4, AC_BOLD_CLASS_C1, AC_BOLD_CLASS_C2, AC_BOLD_CLASS_C7, AC_CHECK_A3, AC_CHECK_A4, AC_CHECK_B1, AC_CHECK_B2, AC_CHECK_B4, AC_CHECK_C1, AC_CHECK_C2, AC_CHECK_C3, AC_CHECK_C5, AC_CHECK_C7, AC_CHECK_EXE,  AC_CLEAR_STATE_A, AC_CLEAR_STATE_B, AC_CLEAR_STATE_C, AC_CLEAR_STATISTIC, AC_COPY_STATISTIC, AC_HINT_MODE, AC_HINT_MODE_B, AC_HINT_MODE_C, AC_INP_ANSW, AC_INP_ANSW_B1, AC_INP_ANSW_C1, AC_INP_ANSW_C3, AC_NEXT, AC_NEXT_B, AC_NEXT_C, AC_NEXT_D, AC_NEXT_E, AC_PREV, AC_PREV_B, AC_PREV_C, AC_PREV_D, AC_PREV_E, AC_SAVE_NUMQUESTION, AC_SAVE_NUMQUESTION_B, AC_SAVE_NUMQUESTION_C, AC_SAVE_SELECT_D, AC_SAVE_SELECT_E, AC_SAVE_SUBCAT, AC_SAVE_SUBCAT_B, AC_SAVE_SUBCAT_C } from "./actionTypes";
+import { AC_BOLD_CLASS, AC_BOLD_CLASS_A4, AC_BOLD_CLASS_B4, AC_BOLD_CLASS_C1, AC_BOLD_CLASS_C2, AC_BOLD_CLASS_C7, AC_CHECK_A3, AC_CHECK_A4, AC_CHECK_A5, AC_CHECK_A6, AC_CHECK_B1, AC_CHECK_B2, AC_CHECK_B4, AC_CHECK_C1, AC_CHECK_C2, AC_CHECK_C3, AC_CHECK_C5, AC_CHECK_C7, AC_CHECK_EXE,  AC_CLEAR_STATE_A, AC_CLEAR_STATE_B, AC_CLEAR_STATE_C, AC_CLEAR_STATISTIC, AC_COPY_STATISTIC, AC_HINT_MODE, AC_HINT_MODE_B, AC_HINT_MODE_C, AC_INP_ANSW, AC_INP_ANSW_B1, AC_INP_ANSW_C1, AC_INP_ANSW_C3, AC_NEXT, AC_NEXT_B, AC_NEXT_C, AC_NEXT_D, AC_NEXT_E, AC_PREV, AC_PREV_B, AC_PREV_C, AC_PREV_D, AC_PREV_E, AC_SAVE_NUMQUESTION, AC_SAVE_NUMQUESTION_B, AC_SAVE_NUMQUESTION_C, AC_SAVE_SELECT_D, AC_SAVE_SELECT_E, AC_SAVE_SUBCAT, AC_SAVE_SUBCAT_B, AC_SAVE_SUBCAT_C } from "./actionTypes";
 
 export const hintModeHandler=(curCatReducer)=>(
     (dispatch, getState)=>{
@@ -7,7 +7,7 @@ export const hintModeHandler=(curCatReducer)=>(
        let selectSubCat=QuizCat.selectSubCat
         if(curCatReducer==='QuizCatA'){
         dispatch(hintMode())
-        if(isChecked && (selectSubCat===0 || selectSubCat===1))
+        if(isChecked && (selectSubCat===0 || selectSubCat===1 || selectSubCat===6))
         dispatch(checkA1(0, false))
         if(isChecked && selectSubCat===3)
         dispatch(checkA4(0, false))
@@ -32,12 +32,16 @@ export const checkExe=(time, curCatReducer)=>(
         let selectSubCat
         if(curCatReducer==='QuizCatA'){
         selectSubCat=getState()[curCatReducer].selectSubCat
-        if(selectSubCat===0 || selectSubCat===1)
+        if(selectSubCat===0 || selectSubCat===1 || selectSubCat===6)
         dispatch(checkA1(time))
         if(selectSubCat===2)
         dispatch(checkA3(time))
         if(selectSubCat===3)
         dispatch(checkA4(time))
+        if(selectSubCat===4 || selectSubCat===5)
+        dispatch(checkA5(time))
+        // if(selectSubCat===5)
+        // dispatch(checkA6(time))
         }
         else if(curCatReducer==='QuizCatB'){
             selectSubCat=getState()[curCatReducer].selectSubCat
@@ -157,6 +161,12 @@ export const boldClassA4=(keyRow, keyCell)=>(
 export const checkA4=(time, permit=true)=>(
     {type:AC_CHECK_A4, time, permit}
 )
+export const checkA5=(time, permit=true)=>(
+    {type:AC_CHECK_A5, time, permit}
+)
+// export const checkA6=(time, permit=true)=>(
+//     {type:AC_CHECK_A6, time, permit}
+// )
 //---------------- D
 export const saveSelectD=(numSelectExe)=>(
     {type:AC_SAVE_SELECT_D, numSelectExe}

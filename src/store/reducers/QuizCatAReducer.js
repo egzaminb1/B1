@@ -1,7 +1,7 @@
 import { catA } from "../../exercises/AllCatDef"
 import { QuizA1_1 } from "../../exercises/QuizCatA/QuizA1_1"
 // import { QuizA1_3 } from "../../exercises/QuizCatA/QuizA1_3"
-import { AC_BOLD_CLASS, AC_BOLD_CLASS_A4, AC_CHECK_A3, AC_CHECK_A4, AC_CHECK_EXE,  AC_CLEAR_STATE_A, AC_HINT_MODE, AC_INP_ANSW, AC_NEXT, AC_PREV, AC_SAVE_NUMQUESTION, AC_SAVE_SUBCAT } from "../actions/actionTypes"
+import { AC_BOLD_CLASS, AC_BOLD_CLASS_A4, AC_CHECK_A3, AC_CHECK_A4, AC_CHECK_A5, AC_CHECK_A6, AC_CHECK_EXE,  AC_CLEAR_STATE_A, AC_HINT_MODE, AC_INP_ANSW, AC_NEXT, AC_PREV, AC_SAVE_NUMQUESTION, AC_SAVE_SUBCAT } from "../actions/actionTypes"
 
 
 //--------------------------------
@@ -70,8 +70,8 @@ export const  QuizCatAReducer=(state=initialState, action)=>{
 
     const currentQuizFunc=(currentQuiz=state.currentQuiz, selectSubCat=state.selectSubCat)=>{
         //debugger
-        let curQuiz
-        if(selectSubCat===0 || selectSubCat===1){
+        let curQuiz={...currentQuiz}
+        if(selectSubCat===0 || selectSubCat===1 || selectSubCat===6){
             curQuiz={...currentQuiz}
             curQuiz.card=[...currentQuiz.card]
             curQuiz.card.map((nCard,i)=>{
@@ -85,7 +85,7 @@ export const  QuizCatAReducer=(state=initialState, action)=>{
         })
         return curQuiz
         }else if(selectSubCat===2){
-            curQuiz={...currentQuiz}
+            // curQuiz={...currentQuiz}
            if(!currentQuiz.arrAnswer){
             let arrAnswer=curQuiz.answer.map((item, i)=>{
                 let arrAnswer={inpWord:'', cls:'', answ:item}
@@ -102,7 +102,7 @@ export const  QuizCatAReducer=(state=initialState, action)=>{
             return curQuiz
 
         }else if(selectSubCat===3){
-            curQuiz={...currentQuiz}
+            // curQuiz={...currentQuiz}
            if(!currentQuiz.arrRows){
             let arrRows=curQuiz.rows.map((item, i)=>{
                 // debugger
@@ -118,6 +118,23 @@ export const  QuizCatAReducer=(state=initialState, action)=>{
                 return(i)
             })
            }
+            return curQuiz
+        }else if( selectSubCat===4 || selectSubCat===5){
+            // curQuiz={...currentQuiz}
+            if(!curQuiz.arrAnswer){
+                // curQuiz.answer=[...currentQuiz.answer]
+                let arrAnswer=curQuiz.answer.map((item,i)=>{
+                    // return ''
+                 return {inpWord:'', cls:'', answ:item}
+                })
+                curQuiz.arrAnswer=arrAnswer
+            }else {
+                curQuiz.arrAnswer=[...currentQuiz.arrAnswer]
+                curQuiz.arrAnswer.map((item, i)=>{
+                    curQuiz.arrAnswer[i]={...item}
+                    return(i)
+                })
+            }
             return curQuiz
         }
     }
@@ -324,6 +341,51 @@ export const  QuizCatAReducer=(state=initialState, action)=>{
                     }
                     
                 return(newState)
+            case AC_CHECK_A5:
+        newState.currentQuiz=currentQuizFunc()
+            for(let x of newState.currentQuiz.arrAnswer){
+                let b1_answ=x.answ.toLowerCase().split('')
+                .filter(function(n) { return n !== ' ' && n !== ''}).join('')
+                let b1_inpWord=x.inpWord.toLowerCase().split('')
+                .filter(function(n) { return n !== ' ' && n !== '' }).join('')
+                if(b1_answ===b1_inpWord){
+                    x.cls='green'
+                    rightAnswers++
+                }else x.cls='red'
+            }
+            pointForAnswer=newState.currentQuiz.template.point
+            quantity=state.currentQuiz.arrAnswer.length-1
+            newState.isChecked=true
+            newState.timerOfComponent=action.time
+            curRightPoints=rightAnswers*pointForAnswer
+            newState.curRightPoints=curRightPoints
+            newState.arrStatistic=[...state.arrStatistic]
+            statistic={catHeader, headQuiz, selectSubCat:state.selectSubCat, numQuestion:state.numQuestion, quantity, points:pointForAnswer, curRightPoints, sumPoints:quantity*pointForAnswer, timerOfComponent:action.time }
+            newState.arrStatistic.push(statistic)
+            return(newState)
+
+        //     case AC_CHECK_A6:
+        // newState.currentQuiz=currentQuizFunc()
+        //     for(let x of newState.currentQuiz.arrAnswer){
+        //         let b1_answ=x.answ.toLowerCase()
+        //         let b1_inpWord=x.inpWord.toLowerCase()
+        //         if(b1_answ===b1_inpWord){
+        //             x.cls='green'
+        //             rightAnswers++
+        //         }else x.cls='red'
+        //     }
+        //     pointForAnswer=newState.currentQuiz.template.point
+        //     quantity=state.currentQuiz.arrAnswer.length-1
+        //     newState.isChecked=true
+        //     newState.timerOfComponent=action.time
+        //     curRightPoints=rightAnswers*pointForAnswer
+        //     newState.curRightPoints=curRightPoints
+        //     newState.arrStatistic=[...state.arrStatistic]
+        //     statistic={catHeader, headQuiz, selectSubCat:state.selectSubCat, numQuestion:state.numQuestion, quantity, points:pointForAnswer, curRightPoints, sumPoints:quantity*pointForAnswer, timerOfComponent:action.time }
+        //     newState.arrStatistic.push(statistic)
+        //     return(newState)
+
+
             // case AC_CHECK_EXE:
             //     return(newState)
              

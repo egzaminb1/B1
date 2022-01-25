@@ -1,0 +1,82 @@
+
+.subCatA7 .questions{
+    position: relative;
+    background: rgba(255, 255, 255, 0.95);
+    border: solid 3px red;
+    border-radius: 10px;
+    box-shadow: 6px 6px 16px #888;
+    padding: 5px 10px;
+}
+.subCatA7 .points{
+    position: relative;
+}
+.subCatA7 .points h5{
+    position: absolute;
+    right: 20px;
+    width: 150px;
+    text-align: right;
+}
+.subCatA7 .questions .bold{
+    font-weight: bold;
+}
+.subCatA7 .questions img.bold{
+    border: solid 3px black;
+}
+.subCatA7 .questions .green{
+    color:green;
+}
+.subCatA7 .questions img.green.bold{
+    border:solid 3px green;
+}
+.subCatA7 .questions img.green{
+    border:solid 1px green;
+    padding: 1px;
+}
+.subCatA7 .questions .red{
+    color:red;
+}
+.subCatA7 .questions img.red{
+    border:solid 3px red;
+    padding: 1px;
+}
+.subCatA7 .block {
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+}
+.subCatA7 .block img {
+    display: block;
+    margin: 0 0 10px;
+}
+.subCatA7 .block>p {
+    font-weight: bold;
+}
+.subCatA7 .block:nth-child(2n){
+    background: rgba(231, 160, 160, 0.3);
+}
+.subCatA7 .block:nth-child(2n+1){
+    background: rgba(160, 231, 222, 0.3);
+}
+.subCatA7 .block .col-sm-4 img:hover{
+    box-shadow: 2px 2px 5px #888;
+}
+.headSubCat{
+    padding: 10px ;
+    margin-bottom: 5px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+}
+.headSubCat h5:first-child{
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    
+}
+.subCatA7 .questions .mask{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: rgba(0,0,0,.1);
+}

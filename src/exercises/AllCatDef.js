@@ -2,6 +2,9 @@
 import  SubCatA1  from "../components/quizesComponents/SubCatA1";
 import  SubCatA3  from "../components/quizesComponents/SubCatA3";
 import  SubCatA4  from "../components/quizesComponents/SubCatA4";
+import SubCatA5 from "../components/quizesComponents/SubCatA5";
+import SubCatA6 from "../components/quizesComponents/SubCatA6";
+import SubCatA7 from "../components/quizesComponents/SubCatA7";
 import  SubCatB1  from "../components/quizesComponents/SubCatB1";
 import SubCatB2 from "../components/quizesComponents/SubCatB2";
 import SubCatB3 from "../components/quizesComponents/SubCatB3";
@@ -30,6 +33,12 @@ import { QuizA4_4 } from "./QuizCatA/QuizA4_4";
 import { QuizA4_5 } from "./QuizCatA/QuizA4_5";
 import { QuizA4_6 } from "./QuizCatA/QuizA4_6";
 import { QuizA4_7 } from "./QuizCatA/QuizA4_7";
+import { QuizA5_1 } from "./QuizCatA/QuizA5_1";
+import { QuizA5_2 } from "./QuizCatA/QuizA5_2";
+import { QuizA6_1 } from "./QuizCatA/QuizA6_1";
+import { QuizA6_2 } from "./QuizCatA/QuizA6_2";
+import { QuizA6_3 } from "./QuizCatA/QuizA6_3";
+import { QuizA7_1 } from "./QuizCatA/QuizA7_1";
 import { QuizB1_1 } from "./quizCatB/QuizB1_1";
 import { QuizB1_10 } from "./quizCatB/QuizB1_10";
 import { QuizB1_11 } from "./quizCatB/QuizB1_11";
@@ -118,6 +127,21 @@ import { QuizE6 } from "./quizCatE/QuizE6";
                 przyjrzeć się swoim odpowiedziom.`],
                 component:<SubCatA4></SubCatA4>,
                 quizes:[QuizA4_1, QuizA4_2, QuizA4_3, QuizA4_4, QuizA4_5, QuizA4_6, QuizA4_7] 
+            },
+            {
+                headQuiz:['Zadania z jednostkamina dobieranie informacji',`To zadanie zwykle polega na dopasowaniu do wypowiedzi kilku osób odpowiednich informacji. Takie zadanie odróżnia się graficznie od pozostałych, ponieważ zwykle podzielone jest na dwie kolumny. Najczęściej należy wpisać odpowiednie litery lub numery przy kolejnych wypowiedziach. Dlatego warto wcześniej uważnie przeczytać zadanie i zorientować się w jego układzie. Dobrze jest podkreślić słowa klucze, określić tematyke zadania.`],
+                component:<SubCatA5></SubCatA5>,
+                quizes:[QuizA5_1, QuizA5_2] 
+            },
+            {
+                headQuiz:['Zadania z wykorzystaniem materiałów graficznych',`Przed przystąpieniem do tego zadania należy uważnie przyjrzeć się wszystkim fotografiom. Zwykle należy wpisać kolejność, w której były opisywane fotografie; czasami zdjęć jest więcej niż wypowiedzi. Innym razem należy zaznaczyć fotografię, która obrazuje treść wypowiedzi. Wtedy najczęściej należy wybrać jedną spośród trzech możliwości.`],
+                component:<SubCatA6></SubCatA6>,
+                quizes:[QuizA6_1, QuizA6_2, QuizA6_3] 
+            },
+            {
+                headQuiz:['Zadania z wykorzystaniem materiałów graficznych',`Przed przystąpieniem do tego zadania należy uważnie przyjrzeć się wszystkim fotografiom. Zwykle należy wpisać kolejność, w której były opisywane fotografie; czasami zdjęć jest więcej niż wypowiedzi. Innym razem należy zaznaczyć fotografię, która obrazuje treść wypowiedzi. Wtedy najczęściej należy wybrać jedną spośród trzech możliwości.`],
+                component:<SubCatA7></SubCatA7>,
+                quizes:[QuizA7_1] 
             }
         ]
     }
