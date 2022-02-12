@@ -1,6 +1,6 @@
 //import React, { Component } from "react";
-import React from "react";
-import { Switch, Route} from 'react-router-dom';
+import React , { useLayoutEffect }from "react";
+import { Switch, Route, useLocation} from 'react-router-dom';
 import  Home  from "./pages/Home";
 import { About } from "./pages/About";
 import  CatA  from "./pages/CatA";
@@ -13,13 +13,24 @@ import CatC from "./pages/CatC";
 // import bgImg from './assets/img/introduction.jpg'
 
 function App() {
+
+   const location = useLocation();
+  // Scroll to top if path changes
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  // React.useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [location.pathname]);
+
   return (
     <div>
       {/* <div className='bgImg' style={{backgroundImage:`url(${bgImg}) `}}></div> */}
       <div >
-        <Switch>
+        <Switch> 
           {/* <Route path="/" exact component={Home}></Route> */}
-          <Route path="/CatA" component={CatA}></Route>
+          <Route path="/CatA" component={CatA} ></Route>
           <Route path="/CatB" component={CatB}></Route>
           <Route path="/CatC" component={CatC}></Route>
           <Route path="/CatD" component={CatD}></Route>

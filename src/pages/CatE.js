@@ -7,6 +7,9 @@ import { DescCatE } from "../exercises/descCat/DescCatE";
 import { WzorE } from "../exercises/quizCatE/WzorE";
 
  const CatE =(props)=>{
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+      }, [props]);
     return(
     <div className='catE'>
         <DescCatE/>

@@ -27,7 +27,7 @@ import "./subCatA6.css";
             return(
                 <div key={i} className='col-sm-6 '>
                     <span>{String.fromCharCode(65+i)} nr </span>
-                    <input type='text' className={classInp} value={input} placeholder="..."  readOnly={rO} size='1' maxLength="1" onChange={(e)=>(props.inpAnsw(e.target.value, i))}></input>
+                    <input type='text' className={classInp} value={input} placeholder="..."  readOnly={rO} size='2' maxLength="2" onChange={(e)=>(props.inpAnsw(e.target.value, i))}></input>
                     <img src={props.quiz.image[i]}></img>
                 </div>
             )

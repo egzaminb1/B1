@@ -18,7 +18,7 @@ import { clearStateA, clearStateB, clearStateC, clearStatistic } from "../store/
  return(
     <div className='home container-fluid'>
         
-        <div className='row introdaction text-center image' style={{backgroundImage:`url(${introduction}) `}}>
+        <div className='row introdaction text-center image' >
         <Navbar></Navbar>
         {/* <div className='intMaska'></div> */}
                 <div className=' intContainer'>

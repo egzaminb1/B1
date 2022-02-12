@@ -7,6 +7,10 @@
     box-shadow: 6px 6px 16px #888;
     padding: 5px 10px;
 }
+.subCatA6 .questions .col-sm-6{
+    
+    margin-bottom: 15px;
+}
 .subCatA6 .points{
     position: relative;
 }
@@ -36,7 +40,7 @@
     background: rgba(0,0,0,.1);
 }
 .subCatA6 input{ 
-    width: 16px;
+    width: 21px;
     padding: 2px;
     border: none;
     background: rgba(228,213,14,.2);

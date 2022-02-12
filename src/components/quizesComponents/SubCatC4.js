@@ -25,6 +25,7 @@ import "./subCatC4.css";
             // console.log(item)
             input=item.answ
             classInp='bold'
+            fontStyle={fontWeight:"700"}
         }
         return(
             <p >

@@ -9,7 +9,7 @@ export const QuizC3_2 = {
            ['ELEKTRONIKA','Wdowa z własnym domem pozna pana (50-65 lat) w celach matrymonialnych.'],
            ['WYPOCZYNEK','Wystawa fotografii prasowej. Plac Solny 7, wstęp wolny, 9.00-18.00.'],
            ['ZWIERZĘTA','Bezwypadkowy, garażowany, rok produkcji: 2001, sprzedam tanio.'],
-           ['TOWARZYSKIE','Doniczki, narzędzia ogrodnicze i duży wybór drzewi kwiatów. Floris.'],
+           ['TOWARZYSKIE','Doniczki, narzędzia ogrodnicze i duży wybór drzew i kwiatów. Floris.'],
            ['EDUKACJA','Do wynajęcia pokoje dwu- i trzyosobowe. 500 metrów od morza.'],
            ['MOTORYZACYJNE','Schudnij 10 kilo w miesiąc! Bez stresu! 100% gwarancji!'],
            ['ZDROWIE I URODA','Firma ubezpieczeniowa poszukuje konsultantów. Wysokie zarobki!'],

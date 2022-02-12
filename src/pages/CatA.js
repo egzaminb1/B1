@@ -9,6 +9,9 @@ import bgImg from '../assets/img/introduction.jpg'
 import { DescCatA } from "../exercises/descCat/DescCatA";
 
  const CatA =(props)=>{
+     React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [props]);
     return(
     <div>
         <DescCatA/>

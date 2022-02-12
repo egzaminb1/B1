@@ -63,6 +63,9 @@
 .subCatC4 .questions .C4_introdaction{
     margin: 5px 5px 20px;
 }
+.subCatC4 input{
+    background: rgba(228,213,14,.2);
+}
 /* @media only screen and (max-width: 992px) {
 	.subCatC4 .questions img.small{
         max-width: 100%;

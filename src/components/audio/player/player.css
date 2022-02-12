@@ -8,8 +8,12 @@
   }
 
   .audio-player {
+    position:sticky;
+    /* top: 107px; */
+    top: calc(96px + 2.5vw);
+    z-index: 19;
     font-family: Arial, Helvetica, sans-serif;
-     padding: 24px;
+     padding: 0 10px;
      border-radius: 10px;
      box-shadow: 6px 6px 16px #888;
      margin-bottom: 20px;
@@ -154,4 +158,9 @@
       font-size:5.5vw;
     }
   }
+  /* @media only screen and (min-width: 700px) {
+    .audio-player {
+      top: calc(110px + 10vw);
+    }
+  } */
   

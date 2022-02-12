@@ -12,7 +12,7 @@ export const QuizC7_2 = {
         ['Turecka stolica pachnie łagodnymi przyprawami.',false],
         ['Tureckie fast foody są nie tylko pożywne, ale także zdrowe.',true],
         ['Lokalne restauracje są pełne gości tylko podczas sezonu turystycznego.',false],
-        ['Bazar jest niemal odrebnym miastem.',true],
+        ['Bazar jest niemal odrębnym miastem.',true],
         ['Na targu można kupić typowe tureckie wyroby o niezbyt dobrej jakości.',false],
         ['Na bazarze trudno się zgubić, ponieważ wszystkie uliczki się ze sobą łączą.',false],
         ['Na bazarze zawsze jest gwarno i głośno.',true],

@@ -19,8 +19,17 @@ import SubCatC7 from "../components/quizesComponents/SubCatC7";
 import { QuizA1_1 } from "./QuizCatA/QuizA1_1";
 import { QuizA1_2 } from "./QuizCatA/QuizA1_2";
 import { QuizA1_3 } from "./QuizCatA/QuizA1_3";
-// import { QuizA2_1 } from "./QuizCatA/QuizA2_1";
+import { QuizA1_4 } from "./QuizCatA/QuizA1_4";
+import { QuizA1_5 } from "./QuizCatA/QuizA1_5";
+import { QuizA1_6 } from "./QuizCatA/QuizA1_6";
+import { QuizA1_7 } from "./QuizCatA/QuizA1_7";
+import { QuizA1_8 } from "./QuizCatA/QuizA1_8";
+import { QuizA1_9 } from "./QuizCatA/QuizA1_9";
 import { QuizA2_2 } from "./QuizCatA/QuizA2_2";
+import { QuizA2_1 } from "./QuizCatA/QuizA2_1";
+import { QuizA2_3 } from "./QuizCatA/QuizA2_3";
+import { QuizA2_4 } from "./QuizCatA/QuizA2_4";
+import { QuizA2_5 } from "./QuizCatA/QuizA2_5";
 import { QuizA3_1 } from "./QuizCatA/QuizA3_1";
 import { QuizA3_2 } from "./QuizCatA/QuizA3_2";
 import { QuizA3_3 } from "./QuizCatA/QuizA3_3";
@@ -97,6 +106,35 @@ import { QuizE3 } from "./quizCatE/QuizE3";
 import { QuizE4 } from "./quizCatE/QuizE4";
 import { QuizE5 } from "./quizCatE/QuizE5";
 import { QuizE6 } from "./quizCatE/QuizE6";
+import { QuizA3_6 } from "./QuizCatA/QuizA3_6";
+import { QuizA5_3 } from "./QuizCatA/QuizA5_3";
+import { QuizA6_4 } from "./QuizCatA/QuizA6_4";
+import { QuizA4_8 } from "./QuizCatA/QuizA4_8";
+import { QuizA3_7 } from "./QuizCatA/QuizA3_7";
+import { QuizA3_8 } from "./QuizCatA/QuizA3_8";
+import { QuizA4_9 } from "./QuizCatA/QuizA4_9";
+import { QuizA5_5 } from "./QuizCatA/QuizA5_5";
+import { QuizA6_5 } from "./QuizCatA/QuizA6_5";
+import { QuizA3_9 } from "./QuizCatA/QuizA3_9";
+import { QuizA4_10 } from "./QuizCatA/QuizA4_10";
+import { QuizA5_4 } from "./QuizCatA/QuizA5_4";
+import { QuizA4_11 } from "./QuizCatA/QuizA4_11";
+import { QuizA6_6 } from "./QuizCatA/QuizA6_6";
+import { QuizA4_12 } from "./QuizCatA/QuizA4_12";
+import { QuizA5_6 } from "./QuizCatA/QuizA5_6";
+import { QuizB1_16 } from "./quizCatB/QuizB1_16";
+import { QuizB1_17 } from "./quizCatB/QuizB1_17";
+import { QuizB1_18 } from "./quizCatB/QuizB1_18";
+import { QuizB1_19 } from "./quizCatB/QuizB1_19";
+import { QuizB3_4 } from "./quizCatB/QuizB3_4";
+import { QuizB1_20 } from "./quizCatB/QuizB1_20";
+import { QuizB1_21 } from "./quizCatB/QuizB1_21";
+import { QuizB1_22 } from "./quizCatB/QuizB1_22";
+import { QuizC1_5 } from "./quizCatC/QuizC1_5";
+import { QuizC1_6 } from "./quizCatC/QuizC1_6";
+import { QuizC2_4 } from "./quizCatC/QuizC2_4";
+import { QuizC7_6 } from "./quizCatC/QuizC7_6";
+import { QuizC6_4 } from "./quizCatC/QuizC6_4";
 
 
     export const catA={
@@ -105,11 +143,11 @@ import { QuizE6 } from "./quizCatE/QuizE6";
             {
                 headQuiz:['Zadania z jednostkami wyboru wielokrotnego','Taki typ ćwiczenia może mieć różne formy. Jedną z nich jest zadanie, które odtwarzane jest tylko jeden raz. Zdający wysłuchuje krótkiego komunikatu, a następnie musi zdecydować, co oznacza wypowiedź lub gdzie jest możliwa do usłyszenia. Warto przeczytać wszystkie odpowiedzi przed usłyszeniem komunikatu. Wybiera się spośród trzech możliwości: jedna z nich jest nieprawdopodobna, druga możliwa, a tylko jedna prawidłowa.'],
                 component:<SubCatA1/>,
-                quizes:[QuizA1_1,QuizA1_2,QuizA1_3] },
+                quizes:[QuizA1_1, QuizA1_2, QuizA1_3, QuizA1_4, QuizA1_5, QuizA1_6, QuizA1_7, QuizA1_8, QuizA1_9] },
             {
                 headQuiz:['Zadania z wyborem wielokrotnym','Inną formą zadania z wyborem wielokrotnym są dłuższe wypowiedzi jednej lub kilku osób. Przed wysłuchaniem nagrania należy przeczytać tylko pierwsze części zdań i pominąć warianty odpowiedzi, aby nie wprowadzały w błąd'],
                 component:<SubCatA1></SubCatA1>,
-                quizes:[QuizA2_2] 
+                quizes:[QuizA2_1, QuizA2_2, QuizA2_3, QuizA2_4, QuizA2_5] 
                 // quizes:[QuizA2_1,QuizA2_2] 
             },
             {
@@ -118,7 +156,7 @@ import { QuizE6 } from "./quizCatE/QuizE6";
                 czego brakuje [np. rzeczownika, czasownika], a także z jakim tematem mogą być związane
                 wyrazy, które należy wpisać.`],
                 component:<SubCatA3></SubCatA3>,
-                quizes:[QuizA3_1, QuizA3_2, QuizA3_3, QuizA3_4, QuizA3_5] 
+                quizes:[QuizA3_1, QuizA3_2, QuizA3_3, QuizA3_4, QuizA3_5, QuizA3_6, QuizA3_7, QuizA3_8, QuizA3_9] 
             },
             {
                 headQuiz:['Zadania z jednostkami prawda/fałsz (P/F)',`Przed wysłuchaniem nagrania należy przeczytać tekst zadania i podkreślić słowa kluczowe
@@ -126,17 +164,17 @@ import { QuizE6 } from "./quizCatE/QuizE6";
                 Należy wykonywać zadanie już w trakcie słuchania, a po zakończeniu nagrania
                 przyjrzeć się swoim odpowiedziom.`],
                 component:<SubCatA4></SubCatA4>,
-                quizes:[QuizA4_1, QuizA4_2, QuizA4_3, QuizA4_4, QuizA4_5, QuizA4_6, QuizA4_7] 
+                quizes:[QuizA4_1, QuizA4_2, QuizA4_3, QuizA4_4, QuizA4_5, QuizA4_6, QuizA4_7, QuizA4_8, QuizA4_9, QuizA4_10, QuizA4_11, QuizA4_12] 
             },
             {
                 headQuiz:['Zadania z jednostkamina dobieranie informacji',`To zadanie zwykle polega na dopasowaniu do wypowiedzi kilku osób odpowiednich informacji. Takie zadanie odróżnia się graficznie od pozostałych, ponieważ zwykle podzielone jest na dwie kolumny. Najczęściej należy wpisać odpowiednie litery lub numery przy kolejnych wypowiedziach. Dlatego warto wcześniej uważnie przeczytać zadanie i zorientować się w jego układzie. Dobrze jest podkreślić słowa klucze, określić tematyke zadania.`],
                 component:<SubCatA5></SubCatA5>,
-                quizes:[QuizA5_1, QuizA5_2] 
+                quizes:[QuizA5_1, QuizA5_2, QuizA5_3, QuizA5_4, QuizA5_5, QuizA5_6] 
             },
             {
                 headQuiz:['Zadania z wykorzystaniem materiałów graficznych',`Przed przystąpieniem do tego zadania należy uważnie przyjrzeć się wszystkim fotografiom. Zwykle należy wpisać kolejność, w której były opisywane fotografie; czasami zdjęć jest więcej niż wypowiedzi. Innym razem należy zaznaczyć fotografię, która obrazuje treść wypowiedzi. Wtedy najczęściej należy wybrać jedną spośród trzech możliwości.`],
                 component:<SubCatA6></SubCatA6>,
-                quizes:[QuizA6_1, QuizA6_2, QuizA6_3] 
+                quizes:[QuizA6_1, QuizA6_2, QuizA6_3, QuizA6_4, QuizA6_5, QuizA6_6] 
             },
             {
                 headQuiz:['Zadania z wykorzystaniem materiałów graficznych',`Przed przystąpieniem do tego zadania należy uważnie przyjrzeć się wszystkim fotografiom. Zwykle należy wpisać kolejność, w której były opisywane fotografie; czasami zdjęć jest więcej niż wypowiedzi. Innym razem należy zaznaczyć fotografię, która obrazuje treść wypowiedzi. Wtedy najczęściej należy wybrać jedną spośród trzech możliwości.`],
@@ -152,7 +190,7 @@ import { QuizE6 } from "./quizCatE/QuizE6";
             {
                 headQuiz:['Transformacje',`To najczęściej spotykany typ zadania. W nawiasie podane są formy podstawowe rzeczowników, czasowników, zaimków, przymiotników, liczebników, przysłówków należy utworzyć poprawną formę tych wyrazów.`],
                 component:<SubCatB1></SubCatB1>,
-                quizes:[QuizB1_1, QuizB1_2, QuizB1_3, QuizB1_4, QuizB1_5, QuizB1_6, QuizB1_7, QuizB1_8, QuizB1_9, QuizB1_10, QuizB1_11, QuizB1_12, QuizB1_13, QuizB1_14, QuizB1_15] 
+                quizes:[QuizB1_1, QuizB1_2, QuizB1_3, QuizB1_4, QuizB1_5, QuizB1_6, QuizB1_7, QuizB1_8, QuizB1_9, QuizB1_10, QuizB1_11, QuizB1_12, QuizB1_13, QuizB1_14, QuizB1_15, QuizB1_16, QuizB1_17, QuizB1_18, QuizB1_19, QuizB1_20, QuizB1_21, QuizB1_22] 
             },
             {
                 headQuiz:['Transformacje',`Tym typem transformacji jest przekształcenie zdań przy użyciu podanych wyrazów. W poleceniu znajduje się wzór, według którego powinno się przekształcać zdania, np. wszystkie transformacje należy utworzyć w formie trybu przypuszczającego. Trzeba pamiętać o dodatkowych operacjach, np. zamianie czasownika na rzeczownik, zamianie rzeczowników na odpowiednie zaimki.`],
@@ -162,7 +200,7 @@ import { QuizE6 } from "./quizCatE/QuizE6";
             {
                 headQuiz:['Zadania z lukami',`Takie zadanie polega na uzupełnieniu tekstu wyrazami, które znajdują się w ramce. Czasami wyrazów jest więcej niż luk w zadaniu, a niektóre wyrazy mogą być użyte więcej niż raz. Należy wybrać odpowiedni wyraz i wpisać w puste miejsce.`],
                 component:<SubCatB3></SubCatB3>,
-                quizes:[QuizB3_1, QuizB3_2, QuizB3_3] 
+                quizes:[QuizB3_1, QuizB3_2, QuizB3_3, QuizB3_4] 
             },
             {
                 headQuiz:['Wybór wielokrotny',`W tym typie zadania należy wybrać poprawną formę spośród kilku podanych. Jeżeli potrafimy zidentyfikować dobrą formę, możemy od razu ją wybrać i nie czytać pozostałych propozycji. Kiedy natomiast nie jesteśmy pewni, pomocna okazać się może
@@ -179,12 +217,12 @@ import { QuizE6 } from "./quizCatE/QuizE6";
             {
                 headQuiz:['Zadania z jednostkami wyboru wielokrotnego',`Wybór informacyjny - pojedyncze napisy`],
                 component:<SubCatC1></SubCatC1>,
-                quizes:[QuizC1_1, QuizC1_2, QuizC1_3, QuizC1_4] 
+                quizes:[QuizC1_1, QuizC1_2, QuizC1_3, QuizC1_4, QuizC1_5, QuizC1_6] 
             },
             {
                 headQuiz:['Zadania z jednostkami wyboru wielokrotnego',`Wybór informacyjny - pojedyncze napisy`],
                 component:<SubCatC2></SubCatC2>,
-                quizes:[QuizC2_1, QuizC2_2, QuizC2_3] 
+                quizes:[QuizC2_1, QuizC2_2, QuizC2_3, QuizC2_4] 
             },
             {
                 headQuiz:['Zadania z jednostkami na dobieranie informacji',``],
@@ -204,12 +242,12 @@ import { QuizE6 } from "./quizCatE/QuizE6";
             {
                 headQuiz:['Zadania z lukami',`Uzupełnianie luk w tekście usuniętymi z niego zdaniami`],
                 component:<SubCatC6></SubCatC6>,
-                quizes:[QuizC6_1, QuizC6_2, QuizC6_3] 
+                quizes:[QuizC6_1, QuizC6_2, QuizC6_3, QuizC6_4] 
             },
             {
                 headQuiz:['Zadania z jednostkami prawda/fałsz (P/F)',``],
                 component:<SubCatC7></SubCatC7>,
-                quizes:[QuizC7_1, QuizC7_2, QuizC7_3, QuizC7_4, QuizC7_5] 
+                quizes:[QuizC7_1, QuizC7_2, QuizC7_3, QuizC7_4, QuizC7_5, QuizC7_6] 
             }
         ]
     }

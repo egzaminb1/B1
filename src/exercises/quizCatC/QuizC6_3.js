@@ -13,7 +13,7 @@ export const QuizC6_3 = {
              'butach podobnych do tych, jakich używają',
              'rozstawił siatkę i z grupą przyjaciół rozegrał pierwszy',
              'karierę: zawody uznano za jedno z najciekawszych wydarzeń',
-             'zdolnościani przygotowania',
+             'zdolności ani przygotowania',
              'w Europie podchwycili pomysł Francuzi'
             ],
     text:[`Siatkówka plażowa to nie to samo co halowa. Zamiast sześciu na sześciu, gra się dwóch na dwóch - tłumaczy .... siatkowej. Czy plażowa, czy halowa, chodzi jednak o to samo: by piłka upadła na boisko przeciwnika. W plażówkę gra się bez .... gorący. Wtedy zawodnicy wkładają specjalne skarpety. Jeśli jest za zimno, gra się w .... windsurferzy. Zawodnicy występują w określonych przepisami ubraniach. To dzięki opalonym ciałom .... rozrywkowe, a nie prawdziwy sport. Nato, żeby połączyć piłkę z plażą, wpadł Amerykanin, który na hawajskiej plaży .... amatorski mecz. Niedługo potem jako pierwsi .... . Pierwsze

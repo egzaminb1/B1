@@ -8,6 +8,9 @@ import { WzorD } from "../exercises/quizCatD/WzorD";
 import { ExerciseD } from "./ExerciseD";
 
  const CatD =(props)=>{
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+      }, [props]);
     return(
     <div className='catD'>
         <DescCatD/>

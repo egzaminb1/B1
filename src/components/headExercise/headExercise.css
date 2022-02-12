@@ -10,7 +10,8 @@
     margin-top: 10px;
     /* background: rgba(255, 255, 255, 0.9); */
     position:sticky;
-   top: 63px;
+   top: 28px;
+   /* top: 63px; */
    z-index: 19;
    background: white;
    font-size: calc(.6rem + 1vw);
